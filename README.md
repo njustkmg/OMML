@@ -46,7 +46,7 @@ PaddleMM 包括以下模块：
 下载工具包
 
 ```
-git clone
+git clone https://github.com/njustkmg/PaddleMM.git
 ```
 
 使用示例：
