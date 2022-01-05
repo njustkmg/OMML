@@ -1,0 +1,8 @@
+numpy==1.18.5
+pyyaml==5.3.1
+tqdm==4.47.0
+scikit-learn==0.23.1
+nltk==3.5
+paddlepaddle-gpu==2.2.0.post112
+paddlenlp==2.0.7
+easydict
