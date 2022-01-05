@@ -1,0 +1,19 @@
+model_name: "CMML"
+
+data_mode: "semi"
+image_type: "raw"
+text_type: "token"
+task: "fusion"
+select_metric: "loss"
+
+num_epochs: 10
+pretrain_epochs: 1
+learning_rate: 0.0001
+batch_size: 4
+num_workers: 10
+val_epoch: 1
+
+supervise_ratio: 0.3      # ratio of supervise data
+bow_dim: 2912             # dim of word
+hidden_dim: 128           # dim of modal
+num_labels: 80            # num of labels
