@@ -22,13 +22,12 @@
 - 球鞋真伪鉴定
 
 <div align=center><img src="doc/identify.gif" width="600px;" /></div>
+  更多信息欢迎访问我们的网站 [Ysneaker](http://www.ysneaker.com/) ！
 
 - 其他应用
 
 ### 落地实践
 - 与百度TIC合作 [智能招聘](https://ai.baidu.com/solution/recruitment) 简历分析，基于多模态融合算法并成功落地。
-
-更多信息欢迎访问我们的网站 [Ysneaker](http://www.ysneaker.com/) ！
 
 ## 框架
 PaddleMM 包括以下模块：
