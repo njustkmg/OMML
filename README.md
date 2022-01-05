@@ -21,15 +21,15 @@
 ### 应用展示
 - 球鞋真伪鉴定
 
-<img src="doc/identity.gif" width="800px;" />
+<div align=center><img src="doc/identity.gif" width="800px;" /></div>
 
 - 球鞋风格迁移
 
-<img src="doc/transfer.gif" width="800px;" />
+<div align=center><img src="doc/transfer.gif" width="800px;" /></div>
 
 - 球鞋检索
 
-<img src="doc/retrieval.gif" width="800px;" />
+<div align=center><img src="doc/retrieval.gif" width="800px;" /></div>
 
 
 更多信息欢迎访问我们的网站 [Ysneaker](http://www.ysneaker.com/) ！
@@ -40,7 +40,7 @@ PaddleMM 包括以下模块：
 - 模型库：包括多模态融合、跨模态检索、图文生成、多任务算法
 - 训练器：对每种任务设置统一的训练流程和相关指标计算
 
-<img src="doc/framework.png" width="400px;" />
+<div align=center><img src="doc/framework.png" width="400px;" /></div>
 
 ### 使用
 下载工具包
@@ -75,7 +75,7 @@ python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/
 
 ### 模型库 (更新中)
 
-<img src="doc/models.png" width="400px;" />
+<div align=center><img src="doc/models.png" width="400px;" /></div>
 
 [1] [Comprehensive Semi-Supervised Multi-Modal Learning](https://www.ijcai.org/proceedings/2019/0568.pdf)
 
