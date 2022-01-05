@@ -44,6 +44,8 @@ PaddleMM 包括以下模块：
 git clone https://github.com/njustkmg/PaddleMM.git
 ```
 
+- 数据搭建说明 [教程](data/README.md)
+
 使用示例：
 
 ```python
