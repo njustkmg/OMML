@@ -21,7 +21,7 @@
 ### 应用展示
 - 球鞋真伪鉴定
 
-<div align=center><img src="doc/identity.gif" width="800px;" /></div>
+<div align=center><img src="doc/identify.gif" width="800px;" /></div>
 
 - 球鞋风格迁移
 
