@@ -15,22 +15,18 @@
 
 ## 特性
 - 丰富的任务场景：工具包提供多模态融合、跨模态检索、图文生成等多种多模态学习任务算法模型库，支持用户自定义数据和训练。
-- 成功的落地实践：基于工具包算法已有相关落地应用，如球鞋真伪鉴定、球鞋风格迁移、家具图片自动描述、舆情监控等。
+- 成功的落地应用：基于工具包算法已有相关落地应用，如球鞋真伪鉴定、球鞋风格迁移、家具图片自动描述、舆情监控等。
 
 
 ### 应用展示
 - 球鞋真伪鉴定
 
-<div align=center><img src="doc/identify.gif" width="800px;" /></div>
+<div align=center><img src="doc/identify.gif" width="600px;" /></div>
 
-- 球鞋风格迁移
+- 其他应用
 
-<div align=center><img src="doc/transfer.gif" width="800px;" /></div>
-
-- 球鞋检索
-
-<div align=center><img src="doc/retrieval.gif" width="800px;" /></div>
-
+### 落地实践
+- 与百度TIC合作 [智能招聘](https://ai.baidu.com/solution/recruitment) 简历分析，基于多模态融合算法并成功落地。
 
 更多信息欢迎访问我们的网站 [Ysneaker](http://www.ysneaker.com/) ！
 
@@ -40,7 +36,7 @@ PaddleMM 包括以下模块：
 - 模型库：包括多模态融合、跨模态检索、图文生成、多任务算法
 - 训练器：对每种任务设置统一的训练流程和相关指标计算
 
-<div align=center><img src="doc/framework.png" width="400px;" /></div>
+<div align=center><img src="doc/framework.png" width="300px;" /></div>
 
 ### 使用
 下载工具包
@@ -75,7 +71,7 @@ python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/
 
 ### 模型库 (更新中)
 
-<div align=center><img src="doc/models.png" width="400px;" /></div>
+<div align=center><img src="doc/models.png" width="300px;" /></div>
 
 [1] [Comprehensive Semi-Supervised Multi-Modal Learning](https://www.ijcai.org/proceedings/2019/0568.pdf)
 
@@ -93,17 +89,6 @@ python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/
 
 
 ### 实验结果
-
-多模态融合
-
-|               | Average_Precision | Coverage | Example_AUC | Macro_AUC | Micro_AUC | Ranking_loss |             |
-| ------------- | ----------------- | -------- | ----------- | --------- | --------- | ------------ | ----------- |
-| CMML          | 0.682             | 18.827   | 0.948       | 0.927     | 0.950     | 0.052        |             |
-| Early(add)    |                   |          |             |           |           |              | ResNet+LSTM |
-| Early(concat) |                   |          |             |           |           |              | ResNet+GRU  |
-
-
-
 
 
 ## 许可证书
