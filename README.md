@@ -39,7 +39,7 @@ PaddleMM 包括以下模块：
 - 模型库：包括多模态融合、跨模态检索、图文生成、多任务算法
 - 训练器：对每种任务设置统一的训练流程和相关指标计算
 
-![](doc/framework.png)
+<img src="doc/framework.png" style="zoom:33%;" />
 
 ### 使用
 下载工具包
@@ -77,13 +77,18 @@ python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/
 ![](doc/models.png) 
 
 [1] [Comprehensive Semi-Supervised Multi-Modal Learning](https://www.ijcai.org/proceedings/2019/0568.pdf)
-[2] [Stacked Cross Attention for Image-Text Matching](https://arxiv.org/pdf/1803.08024.pdf)
-[3] [Similarity Reasoning and Filtration for Image-Text Matching](https://arxiv.org/pdf/2101.01368.pdf)
-[4] [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/pdf/1502.03044.pdf)
-[5] [Attention on Attention for Image Captioning](https://arxiv.org/pdf/1908.06954.pdf)
-[6] [VQA: Visual Question Answering](https://arxiv.org/pdf/1505.00468.pdf)
-[7] [ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks](https://arxiv.org/pdf/1908.02265.pdf)
 
+[2] [Stacked Cross Attention for Image-Text Matching](https://arxiv.org/pdf/1803.08024.pdf)
+
+[3] [Similarity Reasoning and Filtration for Image-Text Matching](https://arxiv.org/pdf/2101.01368.pdf)
+
+[4] [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/pdf/1502.03044.pdf)
+
+[5] [Attention on Attention for Image Captioning](https://arxiv.org/pdf/1908.06954.pdf)
+
+[6] [VQA: Visual Question Answering](https://arxiv.org/pdf/1505.00468.pdf)
+
+[7] [ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks](https://arxiv.org/pdf/1908.02265.pdf)
 
 
 ### 实验结果
