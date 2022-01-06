@@ -26,7 +26,7 @@ PaddleMM toolkit is jointly released by Baidu Talent Think Tank (TIC) and Baidu 
 -  Sneaker authenticity identification
 
 <div align=center><img src="doc/identify.gif" width="600px;" /></div>
-  For more information, please visit our website [Ysneaker](http://www.ysneaker.com/) ！
+  For more information, please visit our website [Ysneaker](http://www.ysneaker.com/) !
 
 - more visualization 
 
