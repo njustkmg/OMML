@@ -10,7 +10,9 @@
 <a href=""><img src="https://img.shields.io/badge/os-linux-pink.svg"></a>
 
 ## Introduction
-PaddleMM aims to provide modal joint learning and cross-modal learning algorithm model libraries, providing efficient solutions for processing multi-modal data such as images and texts, which promote applications of multi-modal machine learning .
+PaddleMM mainly based on Baidu PaddlePaddle platform, compatible with PyTorch version, aiming to provide modal joint learning and cross-modal learning algorithm model libraries, providing efficient solutions for processing multi-modal data such as images and texts, which promote applications of multi-modal machine learning.
+
+PaddleMM toolkit is jointly released by Baidu Talent Think Tank (TIC) and Baidu Deep Learning Platform Paddle Department.
 
 ### Recent updates
 - 2022.1.5 release PaddleMM v1.0
@@ -144,7 +146,6 @@ For more papers, welcome to our website [njustkmg](http://www.njustkmg.cn/) !
 
 ## Contribution
 
-- PaddleMM toolkit is jointly released by Baidu Talent Think Tank (TIC) and Baidu Deep Learning Platform Paddle Department.
 - We welcome you to contribute code to PaddleMM, and thank you very much for your feedback.
 
 
