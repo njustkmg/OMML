@@ -9,7 +9,9 @@
 <a href=""><img src="https://img.shields.io/badge/os-linux-pink.svg"></a>
 
 ## 简介
-飞桨多模态学习工具包 PaddleMM 旨在于提供模态联合学习和跨模态学习算法模型库，为处理图片文本等多模态数据提供高效的解决方案，助力多模态学习应用落地。
+多模态学习工具包 PaddleMM 以百度 PaddlePaddle 平台为主，兼容 PyTorch 版本，旨在于提供模态联合学习和跨模态学习算法模型库，为处理图片文本等多模态数据提供高效的解决方案，助力多模态学习应用落地。
+
+PaddleMM 与百度人才智库（TIC）和百度深度学习平台 Paddle 部门联合发布
 
 ### 近期更新
 - 2022.1.5 发布 PaddleMM 初始版本 v1.0
@@ -146,7 +148,6 @@ python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root
 
 ## 贡献
 
-- PaddleMM 工具包与百度人才智库（TIC）和百度深度学习平台 Paddle 部门联合发布。
 - 我们非常欢迎您为 PaddleMM 贡献代码，也十分感谢你的反馈。
 
 
