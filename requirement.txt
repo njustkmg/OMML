@@ -5,4 +5,6 @@ scikit-learn==0.23.1
 nltk==3.5
 paddlepaddle-gpu==2.2.0.post112
 paddlenlp==2.0.7
+torch==1.7.1
+pytorch_transformers==1.2.0
 easydict
