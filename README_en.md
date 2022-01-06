@@ -6,6 +6,7 @@
 <a href=""><img src="https://img.shields.io/badge/version-1.0-ffa.svg"></a>
 <a href=""><img src="https://img.shields.io/badge/python-3.6+-aff.svg"></a>
 <a href=""><img src="https://img.shields.io/badge/paddlepaddle-2.1.3+-aff.svg"></a>
+<a href=""><img src="https://img.shields.io/badge/torch-1.7.1-aff.svg"></a>
 <a href=""><img src="https://img.shields.io/badge/os-linux-pink.svg"></a>
 
 ## Introduction
