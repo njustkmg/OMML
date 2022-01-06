@@ -9,7 +9,7 @@
 <a href=""><img src="https://img.shields.io/badge/os-linux-pink.svg"></a>
 
 ## 简介
-多模态学习工具包 PaddleMM 以百度 PaddlePaddle 平台为主，兼容 PyTorch 提供 Torch版本，旨在于提供模态联合学习和跨模态学习算法模型库，为处理图片文本等多模态数据提供高效的解决方案，助力多模态学习应用落地。
+多模态学习工具包 PaddleMM 以百度 PaddlePaddle 平台为主，兼容 PyTorch 提供 torch 版本，旨在于提供模态联合学习和跨模态学习算法模型库，为处理图片文本等多模态数据提供高效的解决方案，助力多模态学习应用落地。
 
 PaddleMM 与百度人才智库（TIC）和百度深度学习平台 Paddle 部门联合发布
 
