@@ -106,19 +106,19 @@ python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root
 
 ### Model library (Continuously Updating)
 
-<div align=center><img src="doc/models_en.png" width="300px;" /></div>
+<div align=center><img src="doc/models_en.png" width="600px;" /></div>
 
-[1] [Comprehensive Semi-Supervised Multi-Modal Learning](https://www.ijcai.org/proceedings/2019/0568.pdf)
+[1] Multi-modal early fusion and late fusion
 
-[2] [Stacked Cross Attention for Image-Text Matching](https://arxiv.org/pdf/1803.08024.pdf)
+[2] [Comprehensive Semi-Supervised Multi-Modal Learning](https://www.ijcai.org/proceedings/2019/0568.pdf)
 
-[3] [Similarity Reasoning and Filtration for Image-Text Matching](https://arxiv.org/pdf/2101.01368.pdf)
+[3] [Stacked Cross Attention for Image-Text Matching](https://arxiv.org/pdf/1803.08024.pdf)
 
-[4] [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/pdf/1502.03044.pdf)
+[4] [Similarity Reasoning and Filtration for Image-Text Matching](https://arxiv.org/pdf/2101.01368.pdf)
 
-[5] [Attention on Attention for Image Captioning](https://arxiv.org/pdf/1908.06954.pdf)
+[5] [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/pdf/1502.03044.pdf)
 
-[6] [VQA: Visual Question Answering](https://arxiv.org/pdf/1505.00468.pdf)
+[6] [Attention on Attention for Image Captioning](https://arxiv.org/pdf/1908.06954.pdf)
 
 [7] [ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks](https://arxiv.org/pdf/1908.02265.pdf)
 
@@ -127,12 +127,12 @@ python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root
 
 ### Multi-Modal papers
 
+- Chuan Qin, Hengshu Zhu, Tong Xu, Chen Zhu, Liang Jiang, Enhong Chen, Hui Xiong, Enhancing Person-Job Fit for Talent Recruitment: An Ability-aware Neural Network Approach, In Proceedings of the 41st International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR-2018) , Ann Arbor, Michigan, USA, 2018.
+- Chen Zhu, Hengshu Zhu, Hui Xiong, Chao Ma, Fang Xie, Pengliang Ding, Pan Li, Person-Job Fit: Adapting the Right Talent for the Right Job with Joint Representation Learning, In ACM Transactions on Management Information Systems (ACM TMIS), 2018.
+- Dazhong Shen, Hengshu Zhu, Chuan Qin, Tong Xu, Enhong Chen, Hui Xiong, Joint Representation Learning with Relation-enhanced Topic Models for Intelligent Job Interview Assessment, In ACM Transactions on Information Systems (ACM TOIS) , 2021
 - Yang Yang, Jia-Qi Yang, Ran Bao, De-Chuan Zhan, Hengshu Zhu, Xiao-Ru Gao, Hui Xiong, Jian Yang. Corporate Relative Valuation using Heterogeneous Multi-Modal Graph Neural Network. IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE), 2021. (CCF-A). [Code](https://github.com/njustkmg/TKDE21_HMM)
-- Yang Yang, De-Chuan Zhan, Yuan Jiang, Hui Xiong. Reliable Multi-Modal Learning: A Survey. Ruan Jian Xue Bao/Journal of Software, 2019 (in Chinese), 2019. (CCF-A)
 - Yang Yang, De-Chuan Zhan, Yi-Feng Wu, Zhi-Bin Liu, Hui Xiong, and Yuan Jiang. Semi-Supervised Multi-Modal Clustering and Classification with Incomplete Modalities. IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE), 2020. (CCF-A)
-- Yang Yang, Zhao-Yang Fu, De-Chuan Zhan, Zhi-Bin Liu, Yuan Jiang. Semi-Supervised Multi-Modal Multi-Instance Multi-Label Deep Network with Optimal Transport. IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE), 2020. (CCF-A)
 - Yang Yang, Chubing Zhang, Yi-Chu Xu, Dianhai Yu, De-Chuan Zhan, Jian Yang. Rethinking Label-Wise Cross-Modal Retrieval from A Semantic Sharing Perspective. Proceedings of the 30th International Joint Conference on Artificial Intelligence (IJCAI-2021), Montreal, Canada, 2021. (CCF-A).
-- Yang Yang, Ke-Tao Wang, De-Chuan Zhan, Hui Xiong, Yuan Jiang. Comprehensive Semi-Supervised Multi-Modal Learning. Proceedings of the 28th International Joint Conference on Artificial Intelligence (IJCAI-2019) , Macao, China, 2019. [Pytorch Code](https://github.com/njustkmg/IJCAI19_CMML) [Paddle Code](https://github.com/njustkmg/CMML_Paddle)
 - Yang Yang, Yi-Feng Wu, De-Chuan Zhan, Zhi-Bin Liu, Yuan Jiang. Complex Object Classification: A Multi-Modal Multi-Instance Multi-Label Deep Network with Optimal Transport. Proceedings of the Annual Conference on ACM SIGKDD (KDD-2018) , London, UK, 2018. [Code](https://github.com/njustkmg/KDD18_M3DN)
 
 For more papers, welcome to our website [njustkmg](http://www.njustkmg.cn/) !
