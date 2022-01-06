@@ -27,6 +27,9 @@ PaddleMM aims to provide modal joint learning and cross-modal learning algorithm
 
 - more visualization 
 
+<div align=center><img src="doc/app.png" width="600px;" /></div>
+
+
 ### Enterprise Application
 - Cooperation with Baidu TIC [Smart Recruitment](https://ai.baidu.com/solution/recruitment) Resume analysis, based on multi-modal fusion algorithm and successfully implemented.
 
