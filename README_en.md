@@ -51,7 +51,8 @@ git clone https://github.com/njustkmg/PaddleMM.git
 ```
 
 - Data construction instructions [here](data/README_en.md)
-- Dependent files download [here](paddlemm/metrics/README_en.md)
+- paddlemm: Dependent files download [here](paddlemm/metrics/README_en.md) 
+- torchmm: Dependent files download [here](torchmm/metrics/README_en.md) 
 
 #### Paddle Example:
 
