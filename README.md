@@ -24,7 +24,10 @@
 <div align=center><img src="doc/identify.gif" width="600px;" /></div>
 
 
-- 其他应用
+- 更多应用
+
+<div align=center><img src="doc/app.png" width="600px;" /></div>
+
 
 ### 落地实践
 - 与百度人才智库（TIC）合作 [智能招聘](https://ai.baidu.com/solution/recruitment) 简历分析，基于多模态融合算法并成功落地。
@@ -63,6 +66,9 @@ runner = PaddleMM(config='configs/cmml.yml',
                   data_root='data/COCO', 
                   image_root='data/COCO/images', 
                   gpu=0)
+
+runner.train()
+runner.test()
 ```
 
 或者
