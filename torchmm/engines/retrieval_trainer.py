@@ -34,8 +34,13 @@ class RetrievalTrainer(BaseTrainer):
         self.model.eval()
 
         length = 5000 if split == 'valid' else 25000
-        img_embs = np.zeros((length, 36, self.embed_size))
-        cap_embs = np.zeros((length, self.max_len+2, self.embed_size))
+
+        if self.opt.image_type == 'region':
+            img_embs = np.zeros((length, 36, self.embed_size))
+            cap_embs = np.zeros((length, self.max_len+2, self.embed_size))
+        else:
+            img_embs = np.zeros((length, self.embed_size))
+            cap_embs = np.zeros((length, self.embed_size))
         cap_lens = np.array([0] * length)
 
         for idx, batch in enumerate(tqdm(data_loader, ncols=80)):
@@ -47,8 +52,12 @@ class RetrievalTrainer(BaseTrainer):
             # cache embeddings
             start = idx * 100
             end = min(len(self.dataset), (idx + 1) * 100)
-            img_embs[start: end] = img_emb.cpu().detach().numpy()
-            cap_embs[start: end, :cap_emb.size(1), :] = cap_emb.cpu().detach().numpy()
+            if self.opt.image_type == 'region':
+                img_embs[start: end] = img_emb.cpu().detach().numpy()
+                cap_embs[start: end, :cap_emb.size(1), :] = cap_emb.cpu().detach().numpy()
+            else:
+                img_embs[start: end] = img_emb.cpu().detach().numpy()
+                cap_embs[start: end] = cap_emb.cpu().detach().numpy()
             cap_lens[start: end] = cap_len
 
         return img_embs, cap_embs, cap_lens
@@ -96,7 +105,7 @@ class RetrievalTrainer(BaseTrainer):
 
                 sims = calculate_sim(self.model, img_embs_shard, cap_embs_shard, cap_lens_shard, **self.opt)
                 tmp_res = score_retrieval(sims, npts=1000)
-                print(tmp_res)
+                # print(tmp_res)
                 all_results.append(tmp_res)
 
             result = {}

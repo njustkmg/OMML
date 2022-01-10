@@ -15,6 +15,7 @@ PaddleMM mainly based on Baidu PaddlePaddle platform, compatible with PyTorch ve
 PaddleMM toolkit is jointly released by Baidu Talent Think Tank (TIC) and Baidu Deep Learning Platform Paddle Department.
 
 ### Recent updates
+- 2022.1.10 add cross-modal retrieval method VSE++
 - 2022.1.5 release PaddleMM v1.0
 
 ## Features

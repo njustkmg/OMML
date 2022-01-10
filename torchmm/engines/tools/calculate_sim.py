@@ -11,18 +11,26 @@ import torch
 from torchmm.models import xattn_score_i2t, xattn_score_t2i
 
 
+SIM_MAP = {
+    ''
+}
+
 def calculate_sim(model, img_embs, cap_embs, cap_lens, **kwargs):
     cross_attn = kwargs.get("cross_attn", None)
+    model_name = kwargs.get('model_name').lower()
 
-    start = time.time()
-    if cross_attn == 't2i':
-        sims = shard_xattn_t2i(img_embs, cap_embs, cap_lens, **kwargs)
-    elif cross_attn == 'i2t':
-        sims = shard_xattn_i2t(img_embs, cap_embs, cap_lens, **kwargs)
-    else:
+    # start = time.time()
+    if model_name == 'scan':
+        if cross_attn == 't2i':
+            sims = shard_xattn_t2i(img_embs, cap_embs, cap_lens, **kwargs)
+        elif cross_attn == 'i2t':
+            sims = shard_xattn_i2t(img_embs, cap_embs, cap_lens, **kwargs)
+    elif model_name == 'sgraf':
         sims = shard_attn_scores(model, img_embs, cap_embs, cap_lens, **kwargs)
-    end = time.time()
-    print("calculate similarity time:", end - start)
+    else:
+        sims = img_embs.dot(cap_embs.T)
+    # end = time.time()
+    # print("calculate similarity time:", end - start)
 
     return sims
 

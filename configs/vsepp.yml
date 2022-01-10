@@ -1,0 +1,28 @@
+model_name: "VSEPP"
+
+data_mode: "basic"
+image_type: "raw"
+text_type: "token"
+max_len: 32
+task: "retrieval"
+select_metric: "recall"
+
+num_epochs: 2
+learning_rate: 0.0002
+batch_size: 128
+num_workers: 20
+val_epoch: 1
+grad_clip: 2.
+step_size: 15
+
+cnn_type: "vgg19"                        # vgg19, resnet152
+finetune: False
+measure: cosine                          # cosine or order
+embed_size: 1024                         # Dimensionality of the joint embedding
+word_dim: 300                            # Dimensionality of the word embedding
+image_dim: 4096                          # Dimensionality of the image embedding
+num_layers: 1                            # Number of GRU layers
+use_abs: False                           # Take the absolute value of embedding vectors
+image_norm: True                         # normalize the image embeddings
+margin: 0.2                              # Rank loss margin
+max_violation: True                      # Use max instead of sum in the rank loss
