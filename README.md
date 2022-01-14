@@ -12,7 +12,12 @@
 
 PaddleMM 与百度人才智库（TIC）和百度深度学习平台 Paddle 部门联合发布。
 
-### [近期更新](doc/update.md)
+### 近期更新
+2022.1.14
+- Refactor cross-modal retrieval code and integrate related modules
+- Add cross-modal retrieval method IMIAM
+- Fixed issues in ContrastiveLoss
+[更多](doc/update.md)
 
 ## 特性
 - 丰富的任务场景：工具包提供多模态融合、跨模态检索、图文生成等多种多模态学习任务算法模型库，支持用户自定义数据和训练。
