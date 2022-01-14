@@ -105,7 +105,7 @@ class BaseTrainer(metaclass=ABCMeta):
 
                 self.optimizer.step()
                 self.optimizer.zero_grad()
-                break
+                
                 all_loss.append(loss.cpu().item())
                 train_tqdm.set_description("Epoch: {} | Loss: {:.3f}".format(epoch, loss.item()))
             train_tqdm.close()
