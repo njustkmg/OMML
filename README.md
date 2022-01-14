@@ -17,6 +17,7 @@ PaddleMM 与百度人才智库（TIC）和百度深度学习平台 Paddle 部门
 - Refactor cross-modal retrieval code and integrate related modules
 - Add cross-modal retrieval method IMIAM
 - Fixed issues in ContrastiveLoss
+
 [更多](doc/update.md)
 
 ## 特性
