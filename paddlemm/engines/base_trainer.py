@@ -101,7 +101,7 @@ class BaseTrainer(metaclass=ABCMeta):
             for idx, batch in enumerate(train_tqdm):
                 loss = self.model(batch)
                 loss.backward()
-                break
+                
                 self.optimizer.step()
                 self.optimizer.clear_grad()
 
