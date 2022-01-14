@@ -6,7 +6,7 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(description="PaddleMM")
-    parser.add_argument('--gpu', type=int, default=1)
+    parser.add_argument('--gpu', type=int, default=0)
     parser.add_argument('--config', type=str, default='configs/retrieval/cmml.yml',
                         help='Path to model configuration param file.')
     parser.add_argument('--data_root', type=str, default='data/COCO',
