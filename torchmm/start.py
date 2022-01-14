@@ -32,7 +32,7 @@ class TorchMM(object):
         logger = get_logger(opt.out_root)
 
         for k, v in opt.items():
-            logger.info(f"{k} : {v}")
+            logger.info(f"{str(k)} : {str(v)}")
 
         opt.logger = logger
 

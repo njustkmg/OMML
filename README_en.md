@@ -14,9 +14,7 @@ PaddleMM mainly based on Baidu PaddlePaddle platform, compatible with PyTorch ve
 
 PaddleMM toolkit is jointly released by Baidu Talent Think Tank (TIC) and Baidu Deep Learning Platform Paddle Department.
 
-### Recent updates
-- 2022.1.10 add cross-modal retrieval method VSE++
-- 2022.1.5 release PaddleMM v1.0
+### [Recent updates](doc/update.md)
 
 ## Features
 - Multiple task scenarios: PaddleMM provides a variety of multi-modal learning task algorithm model libraries such as multi-modal fusion, cross-modal retrieval, image caption, and supports user-defined data and training.
@@ -26,18 +24,18 @@ PaddleMM toolkit is jointly released by Baidu Talent Think Tank (TIC) and Baidu 
 ### Visualization 
 -  Sneaker authenticity identification
 
-<div align=center><img src="doc/identify.gif" width="600px;" /></div>
+<div align=center><img src="doc/pic/identify.gif" width="600px;" /></div>
   For more information, please visit our website [Ysneaker](http://www.ysneaker.com/) !
 
 - more visualization 
 
-<div align=center><img src="doc/app_en.png" width="600px;" /></div>
+<div align=center><img src="doc/pic/app_en.png" width="600px;" /></div>
 
 
 ### Enterprise Application
 - Cooperation with Baidu TIC [Smart Recruitment](https://ai.baidu.com/solution/recruitment) Resume analysis, based on multi-modal fusion algorithm and successfully implemented.
 
-<div align=center><img src="doc/tic.png" width="600px;" /></div>
+<div align=center><img src="doc/pic/tic.png" width="600px;" /></div>
 
 ## Framework
 PaddleMM includes the paddle version paddlemm package and the torch version torchmm, which consists of the following three modules:
@@ -45,7 +43,7 @@ PaddleMM includes the paddle version paddlemm package and the torch version torc
 - Model library: Including multi-modal fusion, cross-modal retrieval, image caption, and multi-task algorithms.
 - Trainer: Set up a unified training process and related score calculations for each task.
 
-<div align=center><img src="doc/framework.png" width="300px;" /></div>
+<div align=center><img src="doc/pic/framework.png" width="300px;" /></div>
 
 ### Use
 Download the toolkit:
@@ -54,9 +52,8 @@ Download the toolkit:
 git clone https://github.com/njustkmg/PaddleMM.git
 ```
 
-- Data construction instructions [here](data/README_en.md)
-- paddlemm: Dependent files download [here](paddlemm/metrics/README_en.md) 
-- torchmm: Dependent files download [here](torchmm/metrics/README_en.md) 
+- Data construction instructions [here](data/README.md)
+- Dependent files download [here](paddlemm/metrics/README.md) 
 
 #### Paddle Example:
 
@@ -107,21 +104,24 @@ python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root
 
 ### Model library (Continuously Updating)
 
-<div align=center><img src="doc/models_en.png" width="600px;" /></div>
+<div align=center><img src="doc/pic/models_en.png" width="500px;" /></div>
 
-[1] Multi-modal early fusion and late fusion
-
-[2] [Comprehensive Semi-Supervised Multi-Modal Learning](https://www.ijcai.org/proceedings/2019/0568.pdf)
-
-[3] [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/pdf/1502.03044.pdf)
-
-[4] [Attention on Attention for Image Captioning](https://arxiv.org/pdf/1908.06954.pdf)
-
-[5] [Stacked Cross Attention for Image-Text Matching](https://arxiv.org/pdf/1803.08024.pdf)
-
-[6] [Similarity Reasoning and Filtration for Image-Text Matching](https://arxiv.org/pdf/2101.01368.pdf)
-
-[7] [ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks](https://arxiv.org/pdf/1908.02265.pdf)
+- Modal joint learning - Fusion learning
+  - Early (Multi-modal early fusion)
+  - Late (Multi-modal late fusion)
+- Modal joint learning - Co-training
+  - CMML ([Comprehensive Semi-Supervised Multi-Modal Learning](https://www.ijcai.org/proceedings/2019/0568.pdf))
+- Cross-modal learning - Modal translation
+  - ShowAttendTell ([Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/pdf/1502.03044.pdf))
+  - AoANet ([Attention on Attention for Image Captioning](https://arxiv.org/pdf/1908.06954.pdf))
+- Cross-modal learning - Modal alignment
+  - VSE++ ([VSE++: Improving Visual-Semantic Embeddings with Hard Negatives](https://arxiv.org/pdf/1707.05612.pdf))
+  - SCAN ([Stacked Cross Attention for Image-Text Matching](https://arxiv.org/pdf/1803.08024.pdf))
+  - IMRAM ([IMRAM: Iterative Matching with Recurrent Attention Memory for Cross-Modal Image-Text Retrieval](https://arxiv.org/pdf/2003.03772.pdf))
+  - SGRAF ([Similarity Reasoning and Filtration for Image-Text Matching](https://arxiv.org/pdf/2101.01368.pdf))
+- Multi-task framework based on Transformer structure
+  - VILBERT ([ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks](https://arxiv.org/pdf/1908.02265.pdf))
+  
 
 
 ## Achievement
@@ -146,10 +146,8 @@ For more papers, welcome to our website [njustkmg](http://www.njustkmg.cn/) !
 
 
 ## Contribution
-
+- PaddlePaddle reproduce record. [link](doc/paddle.md) .
 - We welcome you to contribute code to PaddleMM, and thank you very much for your feedback.
-
-
 
 
 ## License

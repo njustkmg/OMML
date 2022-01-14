@@ -11,7 +11,7 @@ import paddle
 import paddle.nn as nn
 from paddle.io import DataLoader
 
-from paddlemm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion
+from paddlemm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, VSEPP, IMRAM
 from paddlemm.datasets import BasicDataset, SemiDataset, PretrainDataset, SampleDataset
 
 
@@ -26,6 +26,8 @@ ModelMap = {
     'cmml': CMML,
     'nic': NIC,
     'scan': SCAN,
+    'vsepp': VSEPP,
+    'imram': IMRAM,
     'sgraf': SGRAF,
     'aoanet': AoANet,
     'earlyfusion': EarlyFusion,
@@ -70,7 +72,7 @@ class BaseTrainer(metaclass=ABCMeta):
         self.gamma = opt.get('gamma', 0.1)
         if self.step_size:
             self.scheduler = paddle.optimizer.lr.StepDecay(learning_rate=self.learning_rate, step_size=self.step_size,
-                                                           gamma=self.gamma, verbose=True)
+                                                           gamma=self.gamma)
             self.optimizer = paddle.optimizer.Adam(parameters=self.model.parameters(),
                                                    learning_rate=self.scheduler,
                                                    weight_decay=self.weight_decay,
@@ -99,7 +101,7 @@ class BaseTrainer(metaclass=ABCMeta):
             for idx, batch in enumerate(train_tqdm):
                 loss = self.model(batch)
                 loss.backward()
-
+                break
                 self.optimizer.step()
                 self.optimizer.clear_grad()
 

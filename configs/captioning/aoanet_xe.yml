@@ -1,0 +1,25 @@
+model_name: "AOANet"
+
+data_mode: "basic"
+image_type: "region"
+text_type: "token"
+add_special_token: False
+max_len: 16
+task: "caption"
+select_metric: "CIDEr"
+
+num_epochs: 25
+learning_rate: 0.0002
+batch_size: 10
+num_workers: 10
+val_epoch: 1
+grad_clip: 2.
+
+sample_len: 20
+smoothing: 0.2
+input_encoding_size: 1024
+rnn_size: 1024
+input_feat_size: 2048
+num_layers: 2
+drop_prob_lm: 0.5
+num_heads: 8

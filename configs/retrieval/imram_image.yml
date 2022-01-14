@@ -1,0 +1,32 @@
+model_name: "IMRAM"
+
+data_mode: "basic"
+image_type: "region"
+text_type: "token"
+max_len: 32
+task: "retrieval"
+select_metric: "recall"
+
+num_epochs: 20
+learning_rate: 0.0005
+batch_size: 128
+num_workers: 10
+val_epoch: 1
+grad_clip: 2.
+step_size: 10
+
+model_mode: "image_IMRAM"                 # full_IMRAM, text_IMRAM, image_IMRAM
+embed_size: 1024                         # Dimensionality of the joint embedding
+word_dim: 300                            # Dimensionality of the word embedding
+image_dim: 2048                          # Dimensionality of the image embedding
+num_layers: 1                            # Number of GRU layers
+use_bi_gru: True                         # Use bidirectional GRU
+image_norm: True                         # normalize the image embeddings
+text_norm: True                          # normalize the text embeddings
+margin: 0.2                              # Rank loss margin
+max_violation: True                      # Use max instead of sum in the rank loss
+agg_func: "Mean"                         # LogSumExp|Mean|Max|Sum
+raw_feature_norm: "clipped_l2norm"       # clipped_l2norm|l2norm|clipped_l1norm|l1norm|no_norm|softmax
+lambda_softmax: 9.                      # Attention softmax temperature
+lambda_lse: 6.                           # LogSumExp temp
+iteration_step: 1                        # routing step

@@ -1,0 +1,18 @@
+model_name: "NIC"
+
+data_mode: "basic"
+image_type: "raw"
+text_type: "token"
+task: "caption"
+select_metric: "Bleu_1"
+
+num_epochs: 10
+learning_rate: 0.0001
+batch_size: 64
+num_workers: 10
+val_epoch: 1
+step_size: 5               # step size for learning rate annealing
+
+network: 'resnet152'        # vgg16 or resnet152
+teacher_forcing: True       # whether to use teacher forcing when training LSTM
+alpha_c: 1.                 # regularization constant (default: 1)

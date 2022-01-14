@@ -1,13 +1,13 @@
-# 数据描述
-PaddleMM 提供处理包括文本和图片的多模态数据，存放数据集的文件夹组织如下：
-- images (存放数据集原始图片)
-- img_feat.npy (经过 Faster-RCNN 提取的图像区域特征)
-- img_box.npy (经过 Faster-RCNN 提取的图像区域位置信息)
-- dataset.json (存放原始数据集相关信息，如文本、数据集划分、标签等，读取方式见 paddlemm/datasets/reader)
+# Data Description
+PaddleMM Provides processing of multi-modal data including text and image. The folder for storing data sets are organized as follows:
+- images (Store the original images of the dataset)
+- img_feat.npy (Image region features extracted by Faster-RCNN)
+- img_box.npy (The location information of the image area extracted by Faster-RCNN)
+- dataset.json (Store the relevant information of the original data set, such as text, data set division, label, etc. See how to read from paddlemm/datasets/reader)
 
-## MSCOCO 数据集
-为得到工具包标准数据读取格式，需要对 MSCOCO 数据集经过以下处理
-- Step 1. 下载 COCO2014 Tran/Val 原始图片和文本数据 [地址](https://cocodataset.org/#download) ，将原始的训练集图片和验证集图片合并成 images 文件夹；
-- Step 2. 下载 Andrej Karpathy 的 COCO 处理和划分文件 [地址](http://cs.stanford.edu/people/karpathy/deepimagesent/caption_datasets.zip) ；
-- Step 3. 下载经过 Faster-RCNN 提取的 COCO 区域特征和位置信息 [地址](https://storage.googleapis.com/up-down-attention/trainval_36.zip) ；
-- Step 4. 分别使用 paddlemm/scripts/coco_region.py 和 paddlemm/scripts/coco_region.py 处理原始数据得到图片特征和标签。
+## MS-COCO Dataset
+To obtain the standard data loading format of the toolkit, the MS-COCO dataset needs to be processed as follows:
+- Step 1. Download COCO2014 Tran/Val images and captions [here](https://cocodataset.org/#download) , merge the training set images and validation set images into 'images' folder.
+- Step 2. Download COCO processing and dividing files by Andrej Karpathy [here](http://cs.stanford.edu/people/karpathy/deepimagesent/caption_datasets.zip) .
+- Step 3. Download COCO regional features and location information extracted by Faster-RCNN [here](https://storage.googleapis.com/up-down-attention/trainval_36.zip) .
+- Step 4. Use paddlemm/scripts/coco_region.py and paddlemm/scripts/coco_region.py to process the original data to get image features and labels.

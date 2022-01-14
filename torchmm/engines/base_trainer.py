@@ -12,7 +12,7 @@ import torch
 from torch.utils.data import DataLoader
 from torch.nn.utils.clip_grad import clip_grad_norm
 
-from torchmm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, VSEPP
+from torchmm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, VSEPP, IMRAM
 from torchmm.datasets import BasicDataset, SemiDataset, PretrainDataset, SampleDataset
 
 
@@ -28,6 +28,7 @@ ModelMap = {
     'nic': NIC,
     'scan': SCAN,
     'vsepp': VSEPP,
+    'imram': IMRAM,
     'sgraf': SGRAF,
     'aoanet': AoANet,
     'earlyfusion': EarlyFusion,
@@ -75,8 +76,7 @@ class BaseTrainer(metaclass=ABCMeta):
                                               weight_decay=self.weight_decay)
             self.scheduler = torch.optim.lr_scheduler.StepLR(optimizer=self.optimizer,
                                                              step_size=self.step_size,
-                                                             gamma=self.gamma,
-                                                             verbose=True)
+                                                             gamma=self.gamma)
         else:
             self.optimizer = torch.optim.Adam(params=self.model.parameters(),
                                               lr=self.learning_rate,
@@ -105,7 +105,7 @@ class BaseTrainer(metaclass=ABCMeta):
 
                 self.optimizer.step()
                 self.optimizer.zero_grad()
-
+                break
                 all_loss.append(loss.cpu().item())
                 train_tqdm.set_description("Epoch: {} | Loss: {:.3f}".format(epoch, loss.item()))
             train_tqdm.close()
@@ -113,7 +113,7 @@ class BaseTrainer(metaclass=ABCMeta):
             if self.step_size:
                 self.scheduler.step()
 
-            torch.save(self.model, os.path.join(self.out_root, 'temp.pt'))
+            torch.save(self.model.state_dict(), os.path.join(self.out_root, 'temp.pkl'))
             if epoch % self.val_epoch == 0:
                 val_res = self.evaluate()
                 if self.select_metric == 'loss':

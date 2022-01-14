@@ -1,0 +1,21 @@
+model_name: "VILBERT"
+bert_config: "configs/bert_configs/bert_base_6layer_6conect.json"
+
+data_mode: "sample"
+image_type: "region"
+text_type: "bert"
+bert_model: 'bert-base-uncased'
+max_len: 32
+task: "multi_task"
+sub_task: "retrieval"
+select_metric: "acc"
+
+num_epochs: 20
+learning_rate: 0.00004
+grad_clip: 1.0
+batch_size: 16
+num_workers: 10
+val_epoch: 1
+weight_decay: 0.01
+warmup_proportion: 0.1
+num_labels: 1

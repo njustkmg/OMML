@@ -11,7 +11,14 @@ from torch.utils.data import DataLoader
 
 from torchmm.metrics import score_retrieval
 from .base_trainer import BaseTrainer
-from .tools.calculate_sim import calculate_sim
+from torchmm.models import SCAN, SGRAF, VSEPP, IMRAM
+
+FunMap = {
+    'scan': SCAN,
+    'sgraf': SGRAF,
+    'vsepp': VSEPP,
+    'imram': IMRAM
+}
 
 
 class RetrievalTrainer(BaseTrainer):
@@ -36,11 +43,11 @@ class RetrievalTrainer(BaseTrainer):
         length = 5000 if split == 'valid' else 25000
 
         if self.opt.image_type == 'region':
-            img_embs = np.zeros((length, 36, self.embed_size))
-            cap_embs = np.zeros((length, self.max_len+2, self.embed_size))
+            img_embs = np.zeros((length, 36, self.embed_size), dtype=np.float32)
+            cap_embs = np.zeros((length, self.max_len+2, self.embed_size), dtype=np.float32)
         else:
-            img_embs = np.zeros((length, self.embed_size))
-            cap_embs = np.zeros((length, self.embed_size))
+            img_embs = np.zeros((length, self.embed_size), dtype=np.float32)
+            cap_embs = np.zeros((length, self.embed_size), dtype=np.float32)
         cap_lens = np.array([0] * length)
 
         for idx, batch in enumerate(tqdm(data_loader, ncols=80)):
@@ -69,9 +76,10 @@ class RetrievalTrainer(BaseTrainer):
                                   shuffle=False,
                                   batch_size=100,
                                   num_workers=self.num_workers)
+
         img_embs, cap_embs, cap_lens = self.encode_data(valid_loader)
         img_embs = np.array([img_embs[i] for i in range(0, len(img_embs), 5)])
-        sims = calculate_sim(self.model, img_embs, cap_embs, cap_lens, **self.opt)
+        sims = FunMap[self.model_name].cal_sim(self.model, img_embs, cap_embs, cap_lens, **self.opt)
         val_res = score_retrieval(sims, npts=100)
         return val_res
 
@@ -92,7 +100,7 @@ class RetrievalTrainer(BaseTrainer):
             # no cross-validation, full evaluation
             img_embs = np.array([img_embs[i] for i in range(0, len(img_embs), 5)])
 
-            sims = calculate_sim(self.model, img_embs, cap_embs, cap_lens, **self.opt)
+            sims = FunMap[self.model_name].cal_sim(self.model, img_embs, cap_embs, cap_lens, **self.opt)
             result = score_retrieval(sims, npts=1000)
 
         else:
@@ -103,7 +111,7 @@ class RetrievalTrainer(BaseTrainer):
                 cap_embs_shard = cap_embs[i * 5000:(i + 1) * 5000]
                 cap_lens_shard = cap_lens[i * 5000:(i + 1) * 5000]
 
-                sims = calculate_sim(self.model, img_embs_shard, cap_embs_shard, cap_lens_shard, **self.opt)
+                sims = FunMap[self.model_name].cal_sim(self.model, img_embs_shard, cap_embs_shard, cap_lens_shard, **self.opt)
                 tmp_res = score_retrieval(sims, npts=1000)
                 # print(tmp_res)
                 all_results.append(tmp_res)

@@ -2,9 +2,8 @@
 # PaddleMM
 
 <a href="./LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-dfd.svg"></a>
-<a href=""><img src="https://img.shields.io/badge/version-1.0-ffa.svg"></a>
 <a href=""><img src="https://img.shields.io/badge/python-3.6+-aff.svg"></a>
-<a href=""><img src="https://img.shields.io/badge/paddlepaddle-2.1.3+-aff.svg"></a>
+<a href=""><img src="https://img.shields.io/badge/paddlepaddle-2.1.3-aff.svg"></a>
 <a href=""><img src="https://img.shields.io/badge/torch-1.7.1-aff.svg"></a>
 <a href=""><img src="https://img.shields.io/badge/os-linux-pink.svg"></a>
 
@@ -13,9 +12,7 @@
 
 PaddleMM 与百度人才智库（TIC）和百度深度学习平台 Paddle 部门联合发布。
 
-### 近期更新
-- 2022.1.10 添加跨模态检索算法 VSE++
-- 2022.1.5 发布 PaddleMM 初始版本 v1.0
+### [近期更新](doc/update.md)
 
 ## 特性
 - 丰富的任务场景：工具包提供多模态融合、跨模态检索、图文生成等多种多模态学习任务算法模型库，支持用户自定义数据和训练。
@@ -25,18 +22,18 @@ PaddleMM 与百度人才智库（TIC）和百度深度学习平台 Paddle 部门
 ### 应用展示
 - 球鞋真伪鉴定 (更多信息欢迎访问我们的网站 [Ysneaker](http://www.ysneaker.com/) ！)
 
-<div align=center><img src="doc/identify.gif" width="600px;" /></div>
+<div align=center><img src="doc/pic/identify.gif" width="600px;" /></div>
 
 
 - 更多应用
 
-<div align=center><img src="doc/app.png" width="600px;" /></div>
+<div align=center><img src="doc/pic/app.png" width="600px;" /></div>
 
 
 ### 落地实践
 - 与百度人才智库（TIC）合作 [智能招聘](https://ai.baidu.com/solution/recruitment) 简历分析，基于多模态融合算法成功落地。
 
-<div align=center><img src="doc/tic.png" width="600px;" /></div>
+<div align=center><img src="doc/pic/tic.png" width="600px;" /></div>
 
 ## 框架
 PaddleMM 包括 paddle 版本 paddlemm 包和 torch 版本 torchmm，由以下三个模块组成：
@@ -44,7 +41,7 @@ PaddleMM 包括 paddle 版本 paddlemm 包和 torch 版本 torchmm，由以下�
 - 模型库：包括多模态融合、跨模态检索、图文生成、多任务算法
 - 训练器：对每种任务设置统一的训练流程和相关指标计算
 
-<div align=center><img src="doc/framework.png" width="300px;" /></div>
+<div align=center><img src="doc/pic/framework.png" width="300px;" /></div>
 
 ### 使用
 下载工具包
@@ -54,8 +51,7 @@ git clone https://github.com/njustkmg/PaddleMM.git
 ```
 
 - 数据搭建说明 [教程](data/README.md)
-- paddlemm  依赖文件下载 [教程](paddlemm/metrics/README.md) 
-- torchmm 依赖文件下载 [教程](torchmm/metrics/README.md) 
+- 依赖文件下载 [教程](paddlemm/metrics/README.md) 
 
 #### paddlemm 使用示例：
 
@@ -109,22 +105,24 @@ python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root
 
 ### 模型库 (持续更新中)
 
-<div align=center><img src="doc/models.png" width="500px;" /></div>
+<div align=center><img src="doc/pic/models.png" width="500px;" /></div>
 
-[1] Multi-modal early fusion and late fusion
-
-[2] [Comprehensive Semi-Supervised Multi-Modal Learning](https://www.ijcai.org/proceedings/2019/0568.pdf)
-
-[3] [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/pdf/1502.03044.pdf)
-
-[4] [Attention on Attention for Image Captioning](https://arxiv.org/pdf/1908.06954.pdf)
-
-[5] [Stacked Cross Attention for Image-Text Matching](https://arxiv.org/pdf/1803.08024.pdf)
-
-[6] [Similarity Reasoning and Filtration for Image-Text Matching](https://arxiv.org/pdf/2101.01368.pdf)
-
-[7] [ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks](https://arxiv.org/pdf/1908.02265.pdf)
-
+- 模态联合学习-融合学习
+  - Early (Multi-modal early fusion)
+  - Late (Multi-modal late fusion)
+- 模态联合学习-协同训练
+  - CMML ([Comprehensive Semi-Supervised Multi-Modal Learning](https://www.ijcai.org/proceedings/2019/0568.pdf))
+- 跨模态学习-模态翻译
+  - ShowAttendTell ([Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/pdf/1502.03044.pdf))
+  - AoANet ([Attention on Attention for Image Captioning](https://arxiv.org/pdf/1908.06954.pdf))
+- 跨模态学习-模态对齐
+  - VSE++ ([VSE++: Improving Visual-Semantic Embeddings with Hard Negatives](https://arxiv.org/pdf/1707.05612.pdf))
+  - SCAN ([Stacked Cross Attention for Image-Text Matching](https://arxiv.org/pdf/1803.08024.pdf))
+  - IMRAM ([IMRAM: Iterative Matching with Recurrent Attention Memory for Cross-Modal Image-Text Retrieval](https://arxiv.org/pdf/2003.03772.pdf))
+  - SGRAF ([Similarity Reasoning and Filtration for Image-Text Matching](https://arxiv.org/pdf/2101.01368.pdf))
+- 基于 Transformer 结构的多任务框架
+  - VILBERT ([ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks](https://arxiv.org/pdf/1908.02265.pdf))
+  
 
 ## 技术支撑
 
@@ -148,7 +146,7 @@ python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root
 
 
 ## 贡献
-
+- PaddlePaddle 复现代码问题记录 [链接](doc/paddle.md) 。
 - 我们非常欢迎您为 PaddleMM 贡献代码，也十分感谢你的反馈。
 
 

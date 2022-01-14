@@ -2,16 +2,16 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-from .caption.spice.spice import Spice
-from .caption.bleu.bleu import Bleu
-from .caption.cider.cider import Cider
-from .caption.rouge.rouge import Rouge
-from .caption.meteor.meteor import Meteor
+from paddlemm.metrics.caption.spice.spice import Spice
+from paddlemm.metrics.caption.bleu.bleu import Bleu
+from paddlemm.metrics.caption.cider.cider import Cider
+from paddlemm.metrics.caption.rouge.rouge import Rouge
+from paddlemm.metrics.caption.meteor.meteor import Meteor
 
-from .caption.tokenizer.ptbtokenizer import PTBTokenizer
+from paddlemm.metrics.caption.tokenizer.ptbtokenizer import PTBTokenizer
 
-from .fusion import average_precision, macro_auc, micro_auc, example_auc, ranking_loss, coverage
-from .retrieval import t2i, i2t
+from paddlemm.metrics.fusion import average_precision, macro_auc, micro_auc, example_auc, ranking_loss, coverage
+from paddlemm.metrics.retrieval import t2i, i2t
 
 import numpy as np
 

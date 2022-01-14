@@ -1,21 +1,22 @@
-from .scan import SCAN, xattn_score_t2i, xattn_score_i2t
-from .sgraf import SGRAF
-from .vsepp import VSEPP
-from .cmml import CMML
-from .nic import NIC
-from .aoanet import AoANet
-from .vilbert import VILBERTFinetune, VILBERTPretrain
-from .layers.bert_config import BertConfig
-from .early import EarlyFusion
-from .late import LateFusion
+from torchmm.models.retrieval.scan import SCAN
+from torchmm.models.retrieval.sgraf import SGRAF
+from torchmm.models.retrieval.vsepp import VSEPP
+from torchmm.models.retrieval.imram import IMRAM
+
+from torchmm.models.captioning.aoanet import AoANet
+from torchmm.models.multitask.vilbert import VILBERTFinetune, VILBERTPretrain
+from torchmm.models.multitask.layers.bert_config import BertConfig
+from torchmm.models.fusion.early import EarlyFusion
+from torchmm.models.fusion.late import LateFusion
+from torchmm.models.fusion.cmml import CMML
+from torchmm.models.captioning.nic import NIC
 
 
 __all__ = [
     'SCAN',
-    'xattn_score_t2i',
-    'xattn_score_i2t',
     'SGRAF',
     'VSEPP',
+    'IMRAM',
     'CMML',
     'NIC',
     'AoANet',
