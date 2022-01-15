@@ -76,7 +76,7 @@ class RetrievalTrainer(BaseTrainer):
         img_embs = np.array([img_embs[i] for i in range(0, len(img_embs), 5)])
         sims = FunMap[self.model_name].cal_sim(self.model, img_embs, cap_embs, cap_lens, **self.opt)
         val_res = score_retrieval(sims, npts=100)
-
+        print(val_res)
         return val_res
 
     def test(self):
@@ -114,7 +114,7 @@ class RetrievalTrainer(BaseTrainer):
                         result[k] += v
                     else:
                         result[k] = v
-            result = {k: np.mean(v) for k, v in result.items()}
+            result = {k: v/5 for k, v in result.items()}
 
         for k, v in result.items():
             self.logger.info(f"{k}: {str(v)}")
