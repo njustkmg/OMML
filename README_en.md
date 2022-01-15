@@ -17,7 +17,7 @@ PaddleMM toolkit is jointly released by Baidu Talent Think Tank (TIC) and Baidu 
 ### [Recent updates](doc/update.md)
 2022.1.14
 - Refactor cross-modal retrieval code and integrate related modules
-- Add cross-modal retrieval method IMIAM
+- Add cross-modal retrieval method IMRAM
 - Fixed issues in ContrastiveLoss
 
 [more](doc/update.md)
