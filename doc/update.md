@@ -2,7 +2,7 @@
 
 2022.1.14
 - Refactor cross-modal retrieval code and integrate related modules
-- Add cross-modal retrieval method IMIAM
+- Add cross-modal retrieval method IMRAM
 - Fixed issues in ContrastiveLoss
 
 2022.1.10 
