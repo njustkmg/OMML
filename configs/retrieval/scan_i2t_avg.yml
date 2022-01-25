@@ -9,7 +9,7 @@ select_metric: "recall"
 
 num_epochs: 20
 learning_rate: 0.0005
-batch_size: 100  # 128 is OOM
+batch_size: 128
 num_workers: 5
 val_epoch: 1
 grad_clip: 2.

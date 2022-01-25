@@ -42,50 +42,76 @@ class BaseTokenizer(object):
             self.idx2word = {int(k):v for k,v in self.idx2word.items()}
             length = word_dict['length']
 
-        self.max_len = max_len if max_len > 0 else length
+        self.max_len = max_len if max_len > 0 else length + 2
         self.vocab_size = len(self.word2idx)
 
     def __call__(self, text):
 
         if not isinstance(text, list):
             text = nltk.tokenize.word_tokenize(text.lower())
-            num = min(len(text) + 2, self.max_len + 2)
-
-            tokens = np.zeros(self.max_len + 2, dtype='int64')
             if self.add_special_token:
+                num = min(len(text) + 2, self.max_len)
+                mask = np.zeros(self.max_len, dtype='int64')
+                mask[:num] = 1
+                tokens = np.zeros(self.max_len, dtype='int64')
                 tokens[0] = self.word2idx['<start>']
                 tokens[num-1] = self.word2idx['<end>']
 
-            mask = np.zeros(self.max_len + 2, dtype='int64')
-            mask[:num] = 1
+                for i, word in enumerate(text):
+                    if i < self.max_len - 2:
+                        if word in self.word2idx:
+                            tokens[i + 1] = self.word2idx[word]
+                        else:
+                            tokens[i + 1] = self.word2idx['<unk>']
+            else:
+                num = min(len(text), self.max_len)
+                mask = np.zeros(self.max_len, dtype='int64')
+                mask[:num] = 1
+                tokens = np.zeros(self.max_len, dtype='int64')
+                tokens[0] = self.word2idx['<start>']
+                tokens[num - 1] = self.word2idx['<end>']
 
-            for i, word in enumerate(text):
-                if i <= self.max_len:
-                    if word in self.word2idx:
-                        tokens[i + 1] = self.word2idx[word]
-                    else:
-                        tokens[i + 1] = self.word2idx['<unk>']
+                for i, word in enumerate(text):
+                    if i < self.max_len:
+                        if word in self.word2idx:
+                            tokens[i] = self.word2idx[word]
+                        else:
+                            tokens[i] = self.word2idx['<unk>']
 
         else:
             # for multi sentence process
-            tokens = np.zeros([5, self.max_len + 2], dtype='int64')
-            mask = np.zeros([5, self.max_len + 2], dtype='int64')
+            tokens = np.zeros([5, self.max_len], dtype='int64')
+            mask = np.zeros([5, self.max_len], dtype='int64')
             num = []
-            for idx in range(5):
-                temp = nltk.tokenize.word_tokenize(text[idx].lower())
-                n = min(len(temp) + 2, self.max_len + 2)
-                if self.add_special_token:
+
+            if self.add_special_token:
+                for idx in range(5):
+                    temp = nltk.tokenize.word_tokenize(text[idx].lower())
+                    n = min(len(temp) + 2, self.max_len)
                     tokens[idx][0] = self.word2idx['<start>']
                     tokens[idx][n-1] = self.word2idx['<end>']
-                mask[idx][:n] = 1
-                num.append(n)
+                    mask[idx][:n] = 1
+                    num.append(n)
 
-                for i, word in enumerate(temp):
-                    if i <= self.max_len:
-                        if word in self.word2idx:
-                            tokens[idx][i + 1] = self.word2idx[word]
-                        else:
-                            tokens[idx][i + 1] = self.word2idx['<unk>']
+                    for i, word in enumerate(temp):
+                        if i < self.max_len - 2:
+                            if word in self.word2idx:
+                                tokens[idx][i + 1] = self.word2idx[word]
+                            else:
+                                tokens[idx][i + 1] = self.word2idx['<unk>']
+            else:
+                for idx in range(5):
+                    temp = nltk.tokenize.word_tokenize(text[idx].lower())
+                    n = min(len(temp), self.max_len)
+                    mask[idx][:n] = 1
+                    num.append(n)
+
+                    for i, word in enumerate(temp):
+                        if i < self.max_len:
+                            if word in self.word2idx:
+                                tokens[idx][i] = self.word2idx[word]
+                            else:
+                                tokens[idx][i] = self.word2idx['<unk>']
 
             num = np.array(num, dtype='int64')
 

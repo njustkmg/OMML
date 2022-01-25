@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="PaddleMM")
     parser.add_argument('--gpu', type=int, default=0)
-    parser.add_argument('--config', type=str, default='configs/retrieval/cmml.yml',
+    parser.add_argument('--config', type=str, default='configs/fusion/cmml.yml',
                         help='Path to model configuration param file.')
     parser.add_argument('--data_root', type=str, default='data/COCO',
                         help='Folder to dataset, include eg. dataset_coco.json, img_feat.npy, img_box.npy and label.npy.')

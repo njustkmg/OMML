@@ -251,7 +251,7 @@ class SCAN(nn.Module):
             """
             Computer pairwise t2i image-caption distance with locality sharding
             """
-            shard_size = kwargs.get('shard_size', 128)
+            shard_size = kwargs.get('shard_size', 1000)
             n_im_shard = int((len(images) - 1) / shard_size + 1)
             n_cap_shard = int((len(captions) - 1) / shard_size + 1)
 
@@ -276,7 +276,7 @@ class SCAN(nn.Module):
             """
             Computer pairwise i2t image-caption distance with locality sharding
             """
-            shard_size = kwargs.get('shard_size', 128)
+            shard_size = kwargs.get('shard_size', 1000)
             n_im_shard = int((len(images) - 1) / shard_size + 1)
             n_cap_shard = int((len(captions) - 1) / shard_size + 1)
 

@@ -44,7 +44,7 @@ class RetrievalTrainer(BaseTrainer):
 
         if self.opt.image_type == 'region':
             img_embs = np.zeros((length, 36, self.embed_size), dtype=np.float32)
-            cap_embs = np.zeros((length, self.max_len+2, self.embed_size), dtype=np.float32)
+            cap_embs = np.zeros((length, self.max_len, self.embed_size), dtype=np.float32)
         else:
             img_embs = np.zeros((length, self.embed_size), dtype=np.float32)
             cap_embs = np.zeros((length, self.embed_size), dtype=np.float32)

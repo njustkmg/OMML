@@ -43,7 +43,7 @@ class RetrievalTrainer(BaseTrainer):
         length = 5000 if split == 'valid' else 25000
         if self.opt.image_type == 'region':
             img_embs = np.zeros((length, 36, self.embed_size), dtype=np.float32)
-            cap_embs = np.zeros((length, self.max_len+2, self.embed_size), dtype=np.float32)
+            cap_embs = np.zeros((length, self.max_len, self.embed_size), dtype=np.float32)
         else:
             img_embs = np.zeros((length, self.embed_size), dtype=np.float32)
             cap_embs = np.zeros((length, self.embed_size), dtype=np.float32)
@@ -111,10 +111,10 @@ class RetrievalTrainer(BaseTrainer):
             for res in all_results:
                 for k, v in res.items():
                     if k in result:
-                        result[k] += v
+                        result[k].append(v)
                     else:
-                        result[k] = v
-            result = {k: v/5 for k, v in result.items()}
+                        result[k] = [v]
+            result = {k: np.mean(v) for k, v in result.items()}
 
         for k, v in result.items():
             self.logger.info(f"{k}: {str(v)}")
