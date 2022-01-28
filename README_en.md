@@ -66,7 +66,6 @@ git clone https://github.com/njustkmg/PaddleMM.git
 - Dependent files download [here](paddlemm/metrics/README.md) 
 
 #### Paddle Example:
-
 ```python
 from paddlemm import PaddleMM
 
@@ -74,42 +73,49 @@ from paddlemm import PaddleMM
 # data_root: Path to dataset
 # image_root: Path to images
 # gpu: Which gpu to use
+
 runner = PaddleMM(config='configs/cmml.yml',
                   data_root='data/COCO', 
                   image_root='data/COCO/images', 
+                  out_root='experiment/cmml_paddle',
                   gpu=0)
 
 runner.train()
 runner.test()
 ```
 
-or
+或者
 
 ```
-python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --gpu 0
+python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --out_root experiment//cmml_paddle --gpu 0
 ```
 
 #### Torch Example:
 
 ```python
 from torchmm import TorchMM
+
 # config: Model running parameters, see configs/
 # data_root: Path to dataset
 # image_root: Path to images
 # cuda: Which gpu to use
+
 runner = TorchMM(config='configs/cmml.yml',
                  data_root='data/COCO', 
-                 image_root='data/COCO/images', 
+                 image_root='data/COCO/images',
+                 out_root='experiment/cmml_torch',
                  cuda=0)
+
 runner.train()
 runner.test()
 ```
 
-or
+或者
 
 ```
-python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --cuda 0
+python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --out_root experiment//cmml_torch --cuda 0
 ```
+
 
 
 ### Model library (Continuously Updating)
