@@ -14,7 +14,7 @@ PaddleMM mainly based on Baidu PaddlePaddle platform, compatible with PyTorch ve
 
 PaddleMM toolkit is jointly released by Baidu Talent Think Tank (TIC) and Baidu Deep Learning Platform Paddle Department.
 Authors of PaddleMM:
-- [NJUST](http://www.njust.edu.cn/)-[PCALAB](http://www.patternrecognition.asia/)-[KMG](http://www.njustkmg.cn/)(Instructed by [Prof. Yang Yang](https://cs.njust.edu.cn/63/5b/c11704a222043/page.htm)) and [baoran](https://github.com/baoran)
+- [NJUST](http://www.njust.edu.cn/)-[PCALAB](http://www.patternrecognition.asia/)-[Prof. Yang Yang](http://www.njustkmg.cn/) and [baoran](https://github.com/baoran)
 - Baidu TIC Department
 - Baidu Deep Learning Platform [Paddle](https://www.paddlepaddle.org.cn/) Department
 
