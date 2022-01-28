@@ -85,7 +85,7 @@ runner.test()
 或者
 
 ```
-python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --out_root experiment//cmml_paddle --gpu 0
+python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --out_root experiment/cmml_paddle --gpu 0
 ```
 #### torchmm 使用示例：
 
@@ -110,7 +110,7 @@ runner.test()
 或者
 
 ```
-python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --out_root experiment//cmml_torch --cuda 0
+python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --out_root experiment/cmml_torch --cuda 0
 ```
 
 
