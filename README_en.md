@@ -13,6 +13,10 @@
 PaddleMM mainly based on Baidu PaddlePaddle platform, compatible with PyTorch version, aiming to provide modal joint learning and cross-modal learning algorithm model libraries, providing efficient solutions for processing multi-modal data such as images and texts, which promote applications of multi-modal machine learning.
 
 PaddleMM toolkit is jointly released by Baidu Talent Think Tank (TIC) and Baidu Deep Learning Platform Paddle Department.
+Authors of PaddleMM:
+- [NJUST](http://www.njust.edu.cn/) - [PCALAB](http://www.patternrecognition.asia/) - [KMG](http://www.njustkmg.cn/)(Instructed by [Prof. Yang Yang](https://cs.njust.edu.cn/63/5b/c11704a222043/page.htm)), [baoran](https://github.com/baoran)
+- Baidu TIC Department
+- Baidu Deep Learning Platform [Paddle](https://www.paddlepaddle.org.cn/) Department
 
 ### Recent Updates
 2022.1.14
