@@ -75,6 +75,7 @@ from paddlemm import PaddleMM
 runner = PaddleMM(config='configs/cmml.yml',
                   data_root='data/COCO', 
                   image_root='data/COCO/images', 
+                  out_root='experiment/cmml_paddle',
                   gpu=0)
 
 runner.train()
@@ -84,7 +85,7 @@ runner.test()
 或者
 
 ```
-python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --gpu 0
+python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --out_root experiment//cmml_paddle --gpu 0
 ```
 #### torchmm 使用示例：
 
@@ -98,7 +99,8 @@ from torchmm import TorchMM
 
 runner = TorchMM(config='configs/cmml.yml',
                  data_root='data/COCO', 
-                 image_root='data/COCO/images', 
+                 image_root='data/COCO/images',
+                 out_root='experiment/cmml_torch',
                  cuda=0)
 
 runner.train()
@@ -108,7 +110,7 @@ runner.test()
 或者
 
 ```
-python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --cuda 0
+python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --out_root experiment//cmml_torch --cuda 0
 ```
 
 
