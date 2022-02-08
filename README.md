@@ -1,5 +1,5 @@
 简体中文 | [English](README_en.md)
-<img src="doc/pic/logo.png" width="400px;" />
+<div align=center><img src="doc/pic/logo.png" width="500px;" /></div>
 
 <a href="./LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-dfd.svg"></a>
 <a href=""><img src="https://img.shields.io/badge/python-3.6+-aff.svg"></a>
