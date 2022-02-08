@@ -1,6 +1,6 @@
 [简体中文](README.md) | English
 
-# PaddleMM
+<div align=center><img src="doc/pic/logo.png" width="500px;" /></div>
 
 <a href="./LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-dfd.svg"></a>
 <a href=""><img src="https://img.shields.io/badge/version-1.0-ffa.svg"></a>
