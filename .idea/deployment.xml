@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="root@172.25.100.125:25756" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="br@192.168.31.83:22 (7)" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="br@192.168.31.83:22">
         <serverdata>
@@ -41,6 +41,13 @@
         <serverdata>
           <mappings>
             <mapping deploy="/home/br/PaddleMM" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="br@192.168.31.83:22 (7)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/br/桌面/PaddleMM" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>

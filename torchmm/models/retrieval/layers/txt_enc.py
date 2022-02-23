@@ -15,7 +15,9 @@ def EncoderText(model_name, vocab_size, word_dim, embed_size, num_layers, use_bi
         'scan': EncoderTextRegion,
         'vsepp': EncoderTextGlobal,
         'sgraf': EncoderTextRegion,
-        'imram': EncoderTextRegion
+        'imram': EncoderTextRegion,
+        'bfan': EncoderTextRegion,
+        'pfan': EncoderTextRegion
     }
 
     if model_name in EncoderMap:

@@ -11,13 +11,14 @@ from torch.utils.data import DataLoader
 
 from torchmm.metrics import score_retrieval
 from .base_trainer import BaseTrainer
-from torchmm.models import SCAN, SGRAF, VSEPP, IMRAM
+from torchmm.models import SCAN, SGRAF, VSEPP, IMRAM, BFAN
 
 FunMap = {
     'scan': SCAN,
     'sgraf': SGRAF,
     'vsepp': VSEPP,
-    'imram': IMRAM
+    'imram': IMRAM,
+    'bfan': BFAN,
 }
 
 

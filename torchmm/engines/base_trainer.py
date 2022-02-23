@@ -12,7 +12,7 @@ import torch
 from torch.utils.data import DataLoader
 from torch.nn.utils.clip_grad import clip_grad_norm
 
-from torchmm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, VSEPP, IMRAM
+from torchmm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, VSEPP, IMRAM, BFAN
 from torchmm.datasets import BasicDataset, SemiDataset, PretrainDataset, SampleDataset
 
 
@@ -32,7 +32,8 @@ ModelMap = {
     'sgraf': SGRAF,
     'aoanet': AoANet,
     'earlyfusion': EarlyFusion,
-    'latefusion': LateFusion
+    'latefusion': LateFusion,
+    'bfan': BFAN,
 }
 
 
@@ -105,7 +106,7 @@ class BaseTrainer(metaclass=ABCMeta):
 
                 self.optimizer.step()
                 self.optimizer.zero_grad()
-                
+
                 all_loss.append(loss.cpu().item())
                 train_tqdm.set_description("Epoch: {} | Loss: {:.3f}".format(epoch, loss.item()))
             train_tqdm.close()

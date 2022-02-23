@@ -2,6 +2,8 @@ from torchmm.models.retrieval.scan import SCAN
 from torchmm.models.retrieval.sgraf import SGRAF
 from torchmm.models.retrieval.vsepp import VSEPP
 from torchmm.models.retrieval.imram import IMRAM
+from torchmm.models.retrieval.bfan import BFAN
+
 
 from torchmm.models.captioning.aoanet import AoANet
 from torchmm.models.multitask.vilbert import VILBERTFinetune, VILBERTPretrain
@@ -17,6 +19,7 @@ __all__ = [
     'SGRAF',
     'VSEPP',
     'IMRAM',
+    'BFAN',
     'CMML',
     'NIC',
     'AoANet',

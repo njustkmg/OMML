@@ -1,5 +1,8 @@
 # Recent Update
 
+2022.2.23
+- Add model BFAN
+
 2022.1.14
 - Refactor cross-modal retrieval code and integrate related modules
 - Add cross-modal retrieval method IMRAM

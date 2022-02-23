@@ -16,10 +16,8 @@ PaddleMM 发布作者：
 - 百度深度学习平台 [Paddle](https://www.paddlepaddle.org.cn/) 部门
 
 ### 近期更新
-2022.1.14
-- Refactor cross-modal retrieval code and integrate related modules
-- Add cross-modal retrieval method IMRAM
-- Fixed issues in ContrastiveLoss
+2022.2.23
+- Add model BFAN
 
 [更多](doc/update.md)
 
@@ -129,6 +127,7 @@ python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root
 - 跨模态学习-模态对齐
   - VSE++ ([VSE++: Improving Visual-Semantic Embeddings with Hard Negatives](https://arxiv.org/pdf/1707.05612.pdf))
   - SCAN ([Stacked Cross Attention for Image-Text Matching](https://arxiv.org/pdf/1803.08024.pdf))
+  - BFAN ([Focus Your Attention: A Bidirectional Focal Attention Network for Image-Text Matching](https://dl.acm.org/doi/10.1145/3343031.3350869))
   - IMRAM ([IMRAM: Iterative Matching with Recurrent Attention Memory for Cross-Modal Image-Text Retrieval](https://arxiv.org/pdf/2003.03772.pdf))
   - SGRAF ([Similarity Reasoning and Filtration for Image-Text Matching](https://arxiv.org/pdf/2101.01368.pdf))
 - 基于 Transformer 结构的多任务框架

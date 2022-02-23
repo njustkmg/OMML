@@ -1,0 +1,28 @@
+model_name: "BFAN"
+
+data_mode: "basic"
+image_type: "region"
+text_type: "token"
+max_len: 32
+task: "retrieval"
+select_metric: "recall"
+
+num_epochs: 15
+learning_rate: 0.0002
+batch_size: 128
+num_workers: 10
+val_epoch: 1
+grad_clip: 2.
+step_size: 15
+
+focal_type: "equal"                      # equal, prob
+embed_size: 1024                         # Dimensionality of the joint embedding
+word_dim: 300                            # Dimensionality of the word embedding
+image_dim: 2048                          # Dimensionality of the image embedding
+num_layers: 1                            # Number of GRU layers
+use_bi_gru: True                         # Use bidirectional GRU
+image_norm: True                         # normalize the image embeddings
+text_norm: True                          # normalize the text embeddings
+margin: 0.2                              # Rank loss margin
+max_violation: True                      # Use max instead of sum in the rank loss
+lambda_softmax: 20.                      # Attention softmax temperature

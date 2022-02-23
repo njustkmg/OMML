@@ -16,7 +16,8 @@ def EncoderImage(model_name, img_dim, embed_size, image_norm=True, cnn_type=None
         'scan': EncoderImagePrecomp,
         'vsepp': EncoderImageFull,
         'sgraf': EncoderImagePrecomp,
-        'imram': EncoderImagePrecomp
+        'imram': EncoderImagePrecomp,
+        'bfan': EncoderImagePrecomp,
     }
 
     if model_name in EncoderMap:
