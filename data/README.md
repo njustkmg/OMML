@@ -10,4 +10,4 @@ To obtain the standard data loading format of the toolkit, the MS-COCO dataset n
 - Step 1. Download COCO2014 Tran/Val images and captions [here](https://cocodataset.org/#download) , merge the training set images and validation set images into 'images' folder.
 - Step 2. Download COCO processing and dividing files by Andrej Karpathy [here](http://cs.stanford.edu/people/karpathy/deepimagesent/caption_datasets.zip) .
 - Step 3. Download COCO regional features and location information extracted by Faster-RCNN [here](https://storage.googleapis.com/up-down-attention/trainval_36.zip) .
-- Step 4. Use paddlemm/scripts/coco_region.py and paddlemm/scripts/coco_region.py to process the original data to get image features and labels.
+- Step 4. Use paddlemm/scripts/coco_region.py and paddlemm/scripts/coco_label.py to process the original data to get image features and labels.
