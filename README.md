@@ -16,8 +16,8 @@ PaddleMM 发布作者：
 - 百度深度学习平台 [Paddle](https://www.paddlepaddle.org.cn/) 部门
 
 ### 近期更新
-2022.2.23
-- Add model BFAN
+2022.5.6
+- Add model LMF
 
 [更多](doc/update.md)
 
