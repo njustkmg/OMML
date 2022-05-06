@@ -1,5 +1,8 @@
 # Recent Update
 
+2022.5.6
+- Add model LMF
+
 2022.2.23
 - Add model BFAN
 
