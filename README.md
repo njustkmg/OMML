@@ -119,6 +119,7 @@ python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root
 - 模态联合学习-融合学习
   - Early (Multi-modal early fusion)
   - Late (Multi-modal late fusion)
+  - LMF ([Efficient Low-rank Multimodal Fusion with Modality-Specific Factors](https://arxiv.org/pdf/1806.00064.pdf))
 - 模态联合学习-协同训练
   - CMML ([Comprehensive Semi-Supervised Multi-Modal Learning](https://www.ijcai.org/proceedings/2019/0568.pdf))
 - 跨模态学习-模态翻译
