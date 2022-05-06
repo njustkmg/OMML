@@ -10,6 +10,7 @@ from torchmm.models.multitask.vilbert import VILBERTFinetune, VILBERTPretrain
 from torchmm.models.multitask.layers.bert_config import BertConfig
 from torchmm.models.fusion.early import EarlyFusion
 from torchmm.models.fusion.late import LateFusion
+from torchmm.models.fusion.lmf import LMFFusion
 from torchmm.models.fusion.cmml import CMML
 from torchmm.models.captioning.nic import NIC
 
@@ -27,5 +28,6 @@ __all__ = [
     'VILBERTPretrain',
     'VILBERTFinetune',
     'EarlyFusion',
-    'LateFusion'
+    'LateFusion',
+    'LMFFusion'
 ]
