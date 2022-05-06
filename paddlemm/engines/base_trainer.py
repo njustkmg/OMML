@@ -11,7 +11,7 @@ import paddle
 import paddle.nn as nn
 from paddle.io import DataLoader
 
-from paddlemm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, VSEPP, IMRAM
+from paddlemm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, LMFFusion, VSEPP, IMRAM
 from paddlemm.datasets import BasicDataset, SemiDataset, PretrainDataset, SampleDataset
 
 
@@ -31,7 +31,8 @@ ModelMap = {
     'sgraf': SGRAF,
     'aoanet': AoANet,
     'earlyfusion': EarlyFusion,
-    'latefusion': LateFusion
+    'latefusion': LateFusion,
+    'lmffusion': LMFFusion
 }
 
 
