@@ -12,7 +12,7 @@ import torch
 from torch.utils.data import DataLoader
 from torch.nn.utils.clip_grad import clip_grad_norm
 
-from torchmm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, VSEPP, IMRAM, BFAN
+from torchmm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, VSEPP, IMRAM, BFAN, LMFFusion
 from torchmm.datasets import BasicDataset, SemiDataset, PretrainDataset, SampleDataset
 
 
@@ -34,6 +34,7 @@ ModelMap = {
     'earlyfusion': EarlyFusion,
     'latefusion': LateFusion,
     'bfan': BFAN,
+    'lmffusion': LMFFusion
 }
 
 
