@@ -16,8 +16,8 @@ PaddleMM 发布作者：
 - 百度深度学习平台 [Paddle](https://www.paddlepaddle.org.cn/) 部门
 
 ### 近期更新
-2022.5.6
-- Add model LMF
+2022.5.8
+- Add model TMC
 
 [更多](doc/update.md)
 
@@ -120,6 +120,7 @@ python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root
   - Early (Multi-modal early fusion)
   - Late (Multi-modal late fusion)
   - LMF ([Efficient Low-rank Multimodal Fusion with Modality-Specific Factors](https://arxiv.org/pdf/1806.00064.pdf))
+  - TMC ([Trusted Multi-View Classification](https://arxiv.org/pdf/2102.02051))
 - 模态联合学习-协同训练
   - CMML ([Comprehensive Semi-Supervised Multi-Modal Learning](https://www.ijcai.org/proceedings/2019/0568.pdf))
 - 跨模态学习-模态翻译
