@@ -25,9 +25,9 @@ class Lstm(nn.Layer):
         txt_hidden = paddle.mean(y, 1)
         txt_predict = self.predict(txt_hidden)
 
-        if self.model_name == "earlyfusion":
+        if self.model_name == "earlyfusion" or self.model_name == "lmffusion":
             return txt_hidden
-        elif self.model_name == "latefusion":
+        elif self.model_name == "latefusion" or self.model_name == "tmcfusion":
             return txt_predict
         else:
             txt_predict = self.sigmoid(txt_predict)
