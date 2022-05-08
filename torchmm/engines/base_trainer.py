@@ -12,7 +12,7 @@ import torch
 from torch.utils.data import DataLoader
 from torch.nn.utils.clip_grad import clip_grad_norm
 
-from torchmm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, VSEPP, IMRAM, BFAN, LMFFusion
+from torchmm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, VSEPP, IMRAM, BFAN, TMCFusion, LMFFusion
 from torchmm.datasets import BasicDataset, SemiDataset, PretrainDataset, SampleDataset
 
 
@@ -34,6 +34,7 @@ ModelMap = {
     'earlyfusion': EarlyFusion,
     'latefusion': LateFusion,
     'bfan': BFAN,
+    'tmcfusion': TMCFusion,
     'lmffusion': LMFFusion
 }
 
@@ -100,6 +101,7 @@ class BaseTrainer(metaclass=ABCMeta):
 
             train_tqdm = tqdm(train_loader, ncols=80)
             for idx, batch in enumerate(train_tqdm):
+                batch['epoch'] = epoch
                 loss = self.model(batch)
                 loss.backward()
                 if self.grad_clip:

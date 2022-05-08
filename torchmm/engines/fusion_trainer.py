@@ -35,6 +35,7 @@ class FusionTrainer(BaseTrainer):
         valid_tqdm = tqdm(valid_loader, ncols=80)
         for idx, batch in enumerate(valid_tqdm):
             with torch.no_grad():
+                batch['epoch'] = self.opt.num_epochs
                 loss, logit = self.model(batch)
                 valid_loss.append(loss.item())
                 all_prediction += logit.cpu().tolist()
@@ -69,6 +70,7 @@ class FusionTrainer(BaseTrainer):
         test_tqdm = tqdm(test_loader, ncols=80)
         for idx, batch in enumerate(test_tqdm):
             with torch.no_grad():
+                batch['epoch'] = self.opt.num_epochs
                 _, logit = self.model(batch)
 
                 all_prediction += logit.cpu().tolist()
@@ -77,7 +79,6 @@ class FusionTrainer(BaseTrainer):
 
         all_prediction = np.array(all_prediction)
         all_label = np.array(all_label)
-
         result = score_fusion(all_label, all_prediction)
 
         for k, v in result.items():
