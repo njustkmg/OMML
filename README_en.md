@@ -18,8 +18,8 @@ Authors of PaddleMM:
 - Baidu Deep Learning Platform [Paddle](https://www.paddlepaddle.org.cn/) Department
 
 ### Recent Updates
-2022.2.23
-- Add model BFAN
+2022.5.8
+- Add model TMC
 
 [more](doc/update.md)
 
@@ -123,6 +123,8 @@ python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root
 - Modal joint learning - Fusion learning
   - Early (Multi-modal early fusion)
   - Late (Multi-modal late fusion)
+  - LMF ([Efficient Low-rank Multimodal Fusion with Modality-Specific Factors](https://arxiv.org/pdf/1806.00064.pdf))
+  - TMC ([Trusted Multi-View Classification](https://arxiv.org/pdf/2102.02051))
 - Modal joint learning - Co-training
   - CMML ([Comprehensive Semi-Supervised Multi-Modal Learning](https://www.ijcai.org/proceedings/2019/0568.pdf))
 - Cross-modal learning - Modal translation
