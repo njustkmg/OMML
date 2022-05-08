@@ -11,7 +11,7 @@ import paddle
 import paddle.nn as nn
 from paddle.io import DataLoader
 
-from paddlemm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, LMFFusion, VSEPP, IMRAM
+from paddlemm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, LMFFusion, TMCFusion, VSEPP, IMRAM
 from paddlemm.datasets import BasicDataset, SemiDataset, PretrainDataset, SampleDataset
 
 
@@ -32,7 +32,8 @@ ModelMap = {
     'aoanet': AoANet,
     'earlyfusion': EarlyFusion,
     'latefusion': LateFusion,
-    'lmffusion': LMFFusion
+    'lmffusion': LMFFusion,
+    'tmcfusion': TMCFusion
 }
 
 
@@ -100,6 +101,7 @@ class BaseTrainer(metaclass=ABCMeta):
 
             train_tqdm = tqdm(train_loader(), ncols=80)
             for idx, batch in enumerate(train_tqdm):
+                batch['epoch'] = epoch
                 loss = self.model(batch)
                 loss.backward()
                 
