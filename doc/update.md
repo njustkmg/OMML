@@ -1,5 +1,7 @@
 # Recent Update
 
+2022.11.14
+- Add model CPRC
 2022.5.8
 - Add model TMC
 
