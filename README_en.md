@@ -1,6 +1,6 @@
 [简体中文](README.md) | English
 
-<div align=center><img src="doc/pic/logo.png" width="500px;" /></div>
+<div align=center><img src="doc/pic/OMML logo.png" width="500px;" /></div>
 
 <a href="./LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-dfd.svg"></a>
 <a href=""><img src="https://img.shields.io/badge/version-1.0-ffa.svg"></a>
@@ -10,7 +10,7 @@
 <a href=""><img src="https://img.shields.io/badge/os-linux-pink.svg"></a>
 
 ## Introduction
-PaddleMM mainly based on Baidu PaddlePaddle platform, compatible with PyTorch version, aiming to provide modal joint learning and cross-modal learning algorithm model libraries, providing efficient solutions for processing multi-modal data such as images and texts, which promote applications of multi-modal machine learning.
+OMML mainly based on on PyTorch, compatible with Paddle version, aiming to provide modal joint learning and cross-modal learning algorithm model libraries, providing efficient solutions for processing multi-modal data such as images and texts, which promote applications of multi-modal machine learning.
 
 Authors of PaddleMM:
 - KMG Group
@@ -18,6 +18,8 @@ Authors of PaddleMM:
 - Baidu Deep Learning Platform [Paddle](https://www.paddlepaddle.org.cn/) Department
 
 ### Recent Updates
+2022.11.14
+- Add model CPRC
 2022.5.8
 - Add model TMC
 
@@ -46,7 +48,7 @@ Authors of PaddleMM:
 <div align=center><img src="doc/pic/tic.png" width="600px;" /></div>
 
 ## Framework
-PaddleMM includes the paddle version paddlemm package and the torch version torchmm, which consists of the following three modules:
+OMML includes torch version torchmm and paddle version paddlemm packages, which consists of the following three modules:
 - Data processing: Provide a unified data interface and multiple data processing formats.
 - Model library: Including multi-modal fusion, cross-modal retrieval, image caption, and multi-task algorithms.
 - Trainer: Set up a unified training process and related score calculations for each task.
@@ -57,38 +59,15 @@ PaddleMM includes the paddle version paddlemm package and the torch version torc
 Download the toolkit:
 
 ```
-git clone https://github.com/njustkmg/PaddleMM.git
+git clone https://github.com/njustkmg/OMML.git
 ```
 
 - Data construction instructions [here](data/README.md)
 - Dependent files download [here](paddlemm/metrics/README.md) 
 
-#### Paddle Example:
-```python
-from paddlemm import PaddleMM
+#### OMML Example:
 
-# config: Model running parameters, see configs/
-# data_root: Path to dataset
-# image_root: Path to images
-# gpu: Which gpu to use
-
-runner = PaddleMM(config='configs/cmml.yml',
-                  data_root='data/COCO', 
-                  image_root='data/COCO/images', 
-                  out_root='experiment/cmml_paddle',
-                  gpu=0)
-
-runner.train()
-runner.test()
-```
-
-或者
-
-```
-python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --out_root experiment/cmml_paddle --gpu 0
-```
-
-#### Torch Example:
+##### Torch Example:
 
 ```python
 from torchmm import TorchMM
@@ -108,12 +87,36 @@ runner.train()
 runner.test()
 ```
 
-或者
+or
 
 ```
 python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --out_root experiment/cmml_torch --cuda 0
 ```
 
+##### Paddle Example:
+```python
+from paddlemm import PaddleMM
+
+# config: Model running parameters, see configs/
+# data_root: Path to dataset
+# image_root: Path to images
+# gpu: Which gpu to use
+
+runner = PaddleMM(config='configs/cmml.yml',
+                  data_root='data/COCO', 
+                  image_root='data/COCO/images', 
+                  out_root='experiment/cmml_paddle',
+                  gpu=0)
+
+runner.train()
+runner.test()
+```
+
+or
+
+```
+python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/COCO/images --out_root experiment/cmml_paddle --gpu 0
+```
 
 
 ### Model library (Continuously Updating)
@@ -130,6 +133,7 @@ python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root
 - Cross-modal learning - Modal translation
   - ShowAttendTell ([Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/pdf/1502.03044.pdf))
   - AoANet ([Attention on Attention for Image Captioning](https://arxiv.org/pdf/1908.06954.pdf))
+  - CPRC ([Exploiting Cross-Modal Prediction and Relation Consistency for Semi-Supervised Image Captioning](https://arxiv.org/pdf/2110.11767v2.pdf))
 - Cross-modal learning - Modal alignment
   - VSE++ ([VSE++: Improving Visual-Semantic Embeddings with Hard Negatives](https://arxiv.org/pdf/1707.05612.pdf))
   - SCAN ([Stacked Cross Attention for Image-Text Matching](https://arxiv.org/pdf/1803.08024.pdf))
@@ -149,6 +153,7 @@ python run_torch.py --config configs/cmml.yml --data_root data/COCO --image_root
 - Chen Zhu, Hengshu Zhu, Hui Xiong, Chao Ma, Fang Xie, Pengliang Ding, Pan Li, Person-Job Fit: Adapting the Right Talent for the Right Job with Joint Representation Learning, In ACM Transactions on Management Information Systems (ACM TMIS), 2018.
 - Dazhong Shen, Hengshu Zhu, Chuan Qin, Tong Xu, Enhong Chen, Hui Xiong, Joint Representation Learning with Relation-enhanced Topic Models for Intelligent Job Interview Assessment, In ACM Transactions on Information Systems (ACM TOIS) , 2021.
 - Yang Yang, Jia-Qi Yang, Ran Bao, De-Chuan Zhan, Hengshu Zhu, Xiao-Ru Gao, Hui Xiong, Jian Yang. Corporate Relative Valuation using Heterogeneous Multi-Modal Graph Neural Network. IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE), 2021. (CCF-A). [Code](https://github.com/njustkmg/TKDE21_HMM)
+- Yang Yang, Hong-Chen Wei, Heng-Shu Zhu, Dian-Hai Yu, Hui Xiong, Jian Yang. Exploiting Cross-Modal Prediction and Relation Consistency for Semi-Supervised Image Captioning. **IEEE Transactions on Cybernetics (IEEE TCYB)**, 2022 in press. (CCF-B).[[Pytorch Code\] ](https://github.com/njustkmg/CPRC-Pytorch)[[Paddle Code\]](https://github.com/njustkmg/CPRC-Paddle)
 - Yang Yang, De-Chuan Zhan, Yi-Feng Wu, Zhi-Bin Liu, Hui Xiong, and Yuan Jiang. Semi-Supervised Multi-Modal Clustering and Classification with Incomplete Modalities. IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE), 2020. (CCF-A)
 - Yang Yang, Chubing Zhang, Yi-Chu Xu, Dianhai Yu, De-Chuan Zhan, Jian Yang. Rethinking Label-Wise Cross-Modal Retrieval from A Semantic Sharing Perspective. Proceedings of the 30th International Joint Conference on Artificial Intelligence (IJCAI-2021), Montreal, Canada, 2021. (CCF-A).
 - Yang Yang, Yi-Feng Wu, De-Chuan Zhan, Zhi-Bin Liu, Yuan Jiang. Complex Object Classification: A Multi-Modal Multi-Instance Multi-Label Deep Network with Optimal Transport. Proceedings of the Annual Conference on ACM SIGKDD (KDD-2018) , London, UK, 2018. [Code](https://github.com/njustkmg/KDD18_M3DN)
@@ -164,7 +169,7 @@ For more papers, welcome to our website [njustkmg](http://www.njustkmg.cn/) !
 
 ## Contribution
 - PaddlePaddle reproduce record. [link](doc/paddle.md) .
-- We welcome you to contribute code to PaddleMM, and thank you very much for your feedback.
+- We welcome you to contribute code to OMML, and thank you very much for your feedback.
 
 
 ## License
