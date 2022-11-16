@@ -12,10 +12,20 @@
 ## Introduction
 OMML mainly based on on PyTorch, compatible with Paddle version, aiming to provide modal joint learning and cross-modal learning algorithm model libraries, providing efficient solutions for processing multi-modal data such as images and texts, which promote applications of multi-modal machine learning.
 
-Authors of PaddleMM:
+Group of OMML:
 - KMG Group
 - Baidu TIC Department
 - Baidu Deep Learning Platform [Paddle](https://www.paddlepaddle.org.cn/) Department
+
+Authors of OMML:
+
+|                    Name                     |  Institution  |       Time       |
+| :-----------------------------------------: | :-----------: | :--------------: |
+|     [baoran](https://github.com/baoran)     | Alibaba Group | 2021.11 - 2022.6 |
+| [Zechun-zyx](https://github.com/Zechun-zyx) |     NJUST     |    2022.10 -     |
+
+
+
 
 ### Recent Updates
 2022.11.14
@@ -121,7 +131,7 @@ python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/
 
 ### Model library (Continuously Updating)
 
-<div align=center><img src="doc/pic/models_en.png" width="500px;" /></div>
+<div align=center><img src="doc/pic/classes_en.png" width="500px;" /></div>
 
 - Modal joint learning - Fusion learning
   - Early (Multi-modal early fusion)
@@ -164,8 +174,7 @@ For more papers, welcome to our website [njustkmg](http://www.njustkmg.cn/) !
 
 - Paddle Paper Reproduction Competition (4st): "Comprehensive Semi-Supervised Multi-Modal Learning" Championship
 - [Paddle Paper Reproduction Competition (5st)](https://aistudio.baidu.com/aistudio/competition/detail/126/0/introduction): "From Recognition to Cognition: Visual Commonsense Reasoning" Championship
-
-
+- [Paddle Paper Reproduction Competition (6st)](https://aistudio.baidu.com/aistudio/competition/detail/205/0/task-definition): "Efficient Low-rank Multimodal Fusion with Modality-Specific Factors" Championship
 
 ## Contribution
 - PaddlePaddle reproduce record. [link](doc/paddle.md) .
