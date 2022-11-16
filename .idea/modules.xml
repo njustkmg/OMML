@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/OMML.iml" filepath="$PROJECT_DIR$/.idea/OMML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PaddleMM.iml" filepath="$PROJECT_DIR$/.idea/PaddleMM.iml" />
     </modules>
   </component>
 </project>
