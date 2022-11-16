@@ -13,8 +13,9 @@
 OMML 发布作者：
 - 南京理工大学 KMG 小组
 
+
 |                  杨杨                   |   郭伟立   |          |
-| :-------------------------------------: | :----------: | :--------------: |
+|:-----------------------------:| :-----------: |:---------:|
 |    鲍然   |     张宇萱     | 奚文涓 |
 
 
@@ -23,13 +24,10 @@ OMML 发布作者：
 
 ### 近期更新
 
-2022.11.14
 
-- Add model CPRC
-
-2022.5.8
-
-- Add model TMC
+- Add model DOMFN 2022.11.17
+- Add model CPRC 2022.11.14
+- Add model TMC 2022.5.8
 
 [更多](doc/update.md)
 
@@ -162,7 +160,7 @@ python run.py --config configs/cmml.yml --data_root data/COCO --image_root data/
 - Yang Yang, De-Chuan Zhan, Yi-Feng Wu, Zhi-Bin Liu, Hui Xiong, and Yuan Jiang. Semi-Supervised Multi-Modal Clustering and Classification with Incomplete Modalities. IEEE Transactions on Knowledge and Data Engineering (IEEE TKDE), 2020. (CCF-A)
 - Yang Yang, Chubing Zhang, Yi-Chu Xu, Dianhai Yu, De-Chuan Zhan, Jian Yang. Rethinking Label-Wise Cross-Modal Retrieval from A Semantic Sharing Perspective. Proceedings of the 30th International Joint Conference on Artificial Intelligence (IJCAI-2021), Montreal, Canada, 2021. (CCF-A).
 - Yang Yang, Yi-Feng Wu, De-Chuan Zhan, Zhi-Bin Liu, Yuan Jiang. Complex Object Classification: A Multi-Modal Multi-Instance Multi-Label Deep Network with Optimal Transport. Proceedings of the Annual Conference on ACM SIGKDD (KDD-2018) , London, UK, 2018. [Code](https://github.com/njustkmg/KDD18_M3DN)
-
+- Yang Yang, Jingshuai Zhang, Fan Gao, Xiaoru Gao, Hengshu Zhu DOMFN: A Divergence-Orientated Multi-Modal Fusion Network for Resume Assessment. ACM MULTIMEDIA(ACMMM-2022) , Lisbon, Portugal, 2022.(CCF-A)
 更多论文欢迎访问我们的网站 [njustkmg](http://www.njustkmg.cn/) ！
 
 ### 飞桨论文复现挑战赛

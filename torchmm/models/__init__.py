@@ -14,6 +14,8 @@ from torchmm.models.fusion.lmf import LMFFusion
 from torchmm.models.fusion.tmc import TMCFusion
 from torchmm.models.fusion.cmml import CMML
 from torchmm.models.captioning.nic import NIC
+from torchmm.models.retrieval.domfn import DOMFN
+
 
 
 __all__ = [
@@ -25,6 +27,7 @@ __all__ = [
     'CMML',
     'NIC',
     'AoANet',
+    'DOMFN',
     'BertConfig',
     'VILBERTPretrain',
     'VILBERTFinetune',
