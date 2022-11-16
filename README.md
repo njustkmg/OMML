@@ -11,9 +11,10 @@
 多模态学习工具包OMML 以**PyTorch**为主，兼容 **Paddle**版本，可通过更换branch方式进行使用，旨在于提供模态联合学习和跨模态学习算法模型库，为处理图片文本等多模态数据提供高效的解决方案，助力多模态学习应用落地。
 
 OMML 发布部门：
-- KMG 小组
-- 百度人才智库 [TIC](https://ai.baidu.com/solution/recruitment) 部门
-- 百度深度学习平台 [Paddle](https://www.paddlepaddle.org.cn/) 部门
+-南京理工大学 KMG 小组
+ 杨杨 郭伟立
+ 鲍然 张宇萱 奚文涓
+
 
 OMML 发布作者
 
@@ -21,6 +22,7 @@ OMML 发布作者
 | :-------------------------------------: | :----------: | :--------------: |
 |    [鲍然](https://github.com/baoran)    |     阿里     | 2021.11 - 2022.6 |
 | [张宇萱](https://github.com/Zechun-zyx) | 南京理工大学 |    2022.10 -     |
+| [奚文涓](XWJXiWenjuan@163.com) | 南京理工大学 |    2022.10 -     |
 
 
 
