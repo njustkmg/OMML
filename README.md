@@ -24,13 +24,10 @@ OMML 发布作者：
 
 ### 近期更新
 
-2022.11.14
 
-- Add model CPRC
 
-2022.5.8
-
-- Add model TMC
+- Add model CPRC 2022.11.14
+- Add model TMC 2022.5.8
 
 [更多](doc/update.md)
 
