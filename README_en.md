@@ -14,8 +14,9 @@ OMML mainly based on on PyTorch, compatible with Paddle version, aiming to provi
 
 Group of OMML:
 - KMG Group
-- Baidu TIC Department
-- Baidu Deep Learning Platform [Paddle](https://www.paddlepaddle.org.cn/) Department
+  - Yangyang Guoweili
+  - Baoran Zhangyuxuan Xiwenjuan
+
 
 Authors of OMML:
 
@@ -23,6 +24,7 @@ Authors of OMML:
 | :-----------------------------------------: | :-----------: | :--------------: |
 |     [baoran](https://github.com/baoran)     | Alibaba Group | 2021.11 - 2022.6 |
 | [Zechun-zyx](https://github.com/Zechun-zyx) |     NJUST     |    2022.10 -     |
+|                  Xiwenjuan                  |     NJUST     |    2022.10 -     |
 
 
 

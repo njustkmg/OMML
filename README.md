@@ -12,8 +12,8 @@
 
 OMML 发布部门：
 - KMG 小组
-- 百度人才智库 [TIC](https://ai.baidu.com/solution/recruitment) 部门
-- 百度深度学习平台 [Paddle](https://www.paddlepaddle.org.cn/) 部门
+  - 杨杨 郭伟立
+  - 鲍然 张宇萱 奚文涓
 
 OMML 发布作者
 
@@ -21,6 +21,7 @@ OMML 发布作者
 | :-------------------------------------: | :----------: | :--------------: |
 |    [鲍然](https://github.com/baoran)    |     阿里     | 2021.11 - 2022.6 |
 | [张宇萱](https://github.com/Zechun-zyx) | 南京理工大学 |    2022.10 -     |
+|                 奚文涓                  | 南京理工大学 |    2022.10 -     |
 
 
 
