@@ -13,9 +13,11 @@
 OMML mainly based on on PyTorch, compatible with Paddle version, aiming to provide modal joint learning and cross-modal learning algorithm model libraries, providing efficient solutions for processing multi-modal data such as images and texts, which promote applications of multi-modal machine learning.
 
 Group of OMML:
-- NJUST KMG Group
-Yangyang Guoweili
-Baoran Zhangyuxuan Xiwenjuan
+- KMG Group
+  - Yangyang Guoweili
+  - Baoran Zhangyuxuan Xiwenjuan
+
+
 
 Authors of OMML:
 
@@ -23,7 +25,7 @@ Authors of OMML:
 | :-----------------------------------------: | :-----------: | :--------------: |
 |     [baoran](https://github.com/baoran)     | Alibaba Group | 2021.11 - 2022.6 |
 | [Zechun-zyx](https://github.com/Zechun-zyx) |     NJUST     |    2022.10 -     |
-|    [Xiwenjuan](XWJXiWenjuan@163.com)        |     NJUST     |    2022.10 -     |
+|                  Xiwenjuan                  |     NJUST     |    2022.10 -     |
 
 
 
