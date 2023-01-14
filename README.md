@@ -52,9 +52,9 @@ OMML 发布作者：
 <div align=center><img src="doc/pic/tic.png" width="600px;" /></div>
 
 ### 可视化模块
-- 调用说明：
-  举例参数设置：dataset="twitter", data_mode="twitter", visual="tsne", choose="fusion"
-	文件输出目录：out_root/tsne
+- 调用说明：<br>
+  举例参数设置：dataset="twitter", data_mode="twitter", visual="tsne", choose="fusion"<br>
+  文件输出目录：out_root/tsne
 - 适配模型：EarlyFusion、LateFusion、TMCFusion、LMFFusion
 - 适配数据集：Twitter2015、Twitter2017
 
