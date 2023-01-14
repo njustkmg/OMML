@@ -1,7 +1,11 @@
 # Recent Update
 
+2023.1.14
+- Add visualization model TSNE
+
 2022.11.14
 - Add model CPRC
+
 2022.5.8
 - Add model TMC
 
