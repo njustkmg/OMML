@@ -23,7 +23,7 @@ OMML 发布作者：
 
 
 ### 近期更新
-- Add visualization of fusion task 2023.1.14
+- Add visualization TSNE of fusion task 2023.1.14
 - Add model DOMFN 2022.11.17
 - Add model CPRC 2022.11.14
 - Add model TMC 2022.5.8
