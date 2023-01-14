@@ -23,6 +23,7 @@ Group of OMML:
 
 
 ### Recent Updates
+- Add visualization of fusion task 2023.1.14
 - Add model DOMFN 2022.11.17
 - Add model CPRC 2022.11.14
 - Add model TMC 2022.5.8
@@ -50,6 +51,11 @@ Group of OMML:
 - Cooperation with Baidu TIC [Smart Recruitment](https://ai.baidu.com/solution/recruitment) Resume analysis, based on multi-modal fusion algorithm and successfully implemented.
 
 <div align=center><img src="doc/pic/tic.png" width="600px;" /></div>
+
+### Visualization module
+- Support the feature visualization of EarlyFusion, LateFusion, TMCFusion and LMFFusion in the multimodal fusion task on the Twitter2015 or Twitter2017 dataset. You can set the "choose" parameter to "fusion", "image", "text" or "image&text" in config to select the features, image features, text features or image text features after visual fusion to display together.
+- The visualized feature image will be stored under "tsne" in the folder specified by the parameter "out_root".
+<div align=center><img src="doc/pic/visual.jpg" width="600px;" /></div>
 
 ## Framework
 OMML includes torch version torchmm and paddle version paddlemm packages, which consists of the following three modules:

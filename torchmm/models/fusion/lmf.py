@@ -49,15 +49,15 @@ class LMFFusion(nn.Module):
     def forward(self, batch):
 
         DTYPE = torch.cuda.FloatTensor
-        img_predict = self.image_model(batch)
-        txt_predict = self.text_model(batch)
-        batch_size = txt_predict.data.shape[0]
+        img_feature = self.image_model(batch)
+        txt_feature = self.text_model(batch)
+        batch_size = txt_feature.data.shape[0]
 
-        img_predict = torch.cat((Variable(torch.ones(batch_size, 1).type(DTYPE), requires_grad=False), img_predict), dim=1)
-        txt_predict = torch.cat((Variable(torch.ones(batch_size, 1).type(DTYPE), requires_grad=False), txt_predict), dim=1)
+        img_feature = torch.cat((Variable(torch.ones(batch_size, 1).type(DTYPE), requires_grad=False), img_feature), dim=1)
+        txt_feature = torch.cat((Variable(torch.ones(batch_size, 1).type(DTYPE), requires_grad=False), txt_feature), dim=1)
 
-        fusion_img = torch.matmul(img_predict, self.image_factor)
-        fusion_txt = torch.matmul(txt_predict, self.text_factor)
+        fusion_img = torch.matmul(img_feature, self.image_factor)
+        fusion_txt = torch.matmul(txt_feature, self.text_factor)
         fusion_zy = fusion_img * fusion_txt
 
         predict = torch.matmul(self.fusion_weights, fusion_zy.permute(1, 0, 2)).squeeze() + self.fusion_bias
@@ -66,7 +66,9 @@ class LMFFusion(nn.Module):
         predict = self.sigmoid(predict)
         loss = self.criterion(predict, batch['label'])
 
-        if self.training:
-            return loss
-        else:
-            return loss, predict
+        return {
+            'loss': loss,
+            'logit': predict,
+            'img_feature': img_feature,
+            'txt_feature': txt_feature
+        }

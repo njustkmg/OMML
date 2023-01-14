@@ -32,7 +32,7 @@ class Gru(nn.Module):
         if self.model_name == "earlyfusion" or self.model_name == "lmffusion":
             return txt_hidden
         elif self.model_name == "latefusion" or self.model_name == "tmcfusion":
-            return txt_predict
+            return txt_hidden, txt_predict
         else:
             txt_predict = self.sigmoid(txt_predict)
             loss = self.criterion(txt_predict, batch['label'])

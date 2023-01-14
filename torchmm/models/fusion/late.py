@@ -36,8 +36,8 @@ class LateFusion(nn.Module):
 
     def forward(self, batch):
 
-        img_predict = self.image_model(batch)
-        txt_predict = self.text_model(batch)
+        img_feature, img_predict = self.image_model(batch)
+        txt_featrue, txt_predict = self.text_model(batch)
 
         if self.option == "mean":
             predict = torch.cat([img_predict.unsqueeze(0), txt_predict.unsqueeze(0)], 0)
@@ -51,7 +51,10 @@ class LateFusion(nn.Module):
         predict = self.sigmoid(predict)
         loss = self.criterion(predict, batch['label'])
 
-        if self.training:
-            return loss
-        else:
-            return loss, predict
+        return {
+            'loss': loss,
+            'logit': predict,
+            'img_feature': img_feature,
+            'txt_feature': txt_featrue
+        }
+

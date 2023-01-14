@@ -417,7 +417,7 @@ class BertBiAttention(nn.Module):
         use_co_attention_mask=False,
     ):
 
-        # for vision input.
+        # for visual input.
         mixed_query_layer1 = self.query1(input_tensor1)
         mixed_key_layer1 = self.key1(input_tensor1)
         mixed_value_layer1 = self.value1(input_tensor1)
@@ -566,7 +566,7 @@ class BertEncoder(nn.Module):
 
         # in the bert encoder, we need to extract three things here.
         # text bert layer: BertLayer
-        # vision bert layer: BertImageLayer
+        # visual bert layer: BertImageLayer
         # Bi-Attention: Given the output of two bertlayer, perform bi-directional
         # attention and add on two layers.
 
@@ -955,7 +955,7 @@ class BertModel(BertPreTrainedModel):
 
         self.task_specific_tokens = config.task_specific_tokens
 
-        # initlize the vision embedding
+        # initlize the visual embedding
         self.v_embeddings = BertImageEmbeddings(config)
 
         self.encoder = BertEncoder(config)

@@ -43,21 +43,23 @@ class EarlyFusion(nn.Module):
 
     def forward(self, batch):
 
-        img_hidden = self.image_model(batch)
-        txt_hidden = self.text_model(batch)
+        img_feature = self.image_model(batch)
+        txt_feature = self.text_model(batch)
 
         if self.option == "concat":
-            hidden = torch.cat([img_hidden, txt_hidden], 1)
-            predict = self.linear1(hidden)
+            fusion_feature = torch.cat([img_feature, txt_feature], 1)
+            predict = self.linear1(fusion_feature)
         else:
-            hidden = torch.add(img_hidden, txt_hidden)
-            predict = self.linear2(hidden)
+            fusion_feature = torch.add(img_feature, txt_feature)
+            predict = self.linear2(fusion_feature)
 
         predict = self.sigmoid(predict)
-
         loss = self.criterion(predict, batch['label'])
 
-        if self.training:
-            return loss
-        else:
-            return loss, predict
+        return {
+            'loss': loss,
+            'logit': predict,
+            'fusion_feature': fusion_feature,
+            'img_feature': img_feature,
+            'txt_feature': txt_feature
+        }

@@ -23,7 +23,7 @@ OMML 发布作者：
 
 
 ### 近期更新
-
+- Add visualization of fusion task 2023.1.14
 - Add model DOMFN 2022.11.17
 - Add model CPRC 2022.11.14
 - Add model TMC 2022.5.8
@@ -50,6 +50,12 @@ OMML 发布作者：
 - 与百度人才智库（TIC）合作 [智能招聘](https://ai.baidu.com/solution/recruitment) 简历分析，基于多模态融合算法成功落地。
 
 <div align=center><img src="doc/pic/tic.png" width="600px;" /></div>
+
+### 可视化模块
+- 支持多模态融合任务中EarlyFusion、LateFusion、TMCFusion、LMFFusion在Twitter2015或Twitter2017数据集上的特征可视化，可在config中设置"choose"参数为"fusion"、"image"、"text"或"image&text"以选择可视化融合后的特征、图像特征、文本特征或图像文本特征共同显示。
+- 可视化的特征图像将存于参数"out_root"指定的文件夹的"tsne"下。
+
+<div align=center><img src="doc/pic/visual.jpg" width="600px;" /></div>
 
 ## 框架
 OMML 包括torch 版本 torchmm 和 paddle 版本 paddlemm 包，由以下三个模块组成：
