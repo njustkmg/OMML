@@ -180,7 +180,9 @@ class CMML(nn.Module):
         unsupervised_loss = (tensor1loss + tensor2loss) / unsupervised_img.shape[0]
         total_loss = supervised_loss + 0.01 * div + unsupervised_loss
 
-        return total_loss
+        return {
+            'loss': total_loss,
+        }
 
     def forward_eval(self, batch):
         """for evaluation, batch only contain supervised data"""
@@ -221,4 +223,10 @@ class CMML(nn.Module):
 
         total_loss = self.criterion(supervised_predict, label)
 
-        return total_loss, supervised_predict
+        return {
+            'loss': total_loss,
+            'logit': supervised_predict,
+            'fusion_feature': supervised_hidden,
+            'img_feature': supervised_img_hidden,
+            'txt_feature': supervised_txt_hidden
+        }

@@ -38,7 +38,7 @@ class Resnet(nn.Module):
         if self.model_name == "earlyfusion" or self.model_name == "lmffusion":
             return img_hidden
         elif self.model_name == "latefusion" or self.model_name == "tmcfusion":
-            return img_predict
+            return img_hidden, img_predict
         else:
             img_predict = self.sigmoid(img_predict)
             loss = self.criterion(img_predict, batch['label'])

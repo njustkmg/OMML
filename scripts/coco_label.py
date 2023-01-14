@@ -8,15 +8,15 @@ import os
 
 
 def main(opt):
-    # TRAIN_INS = '../data/COCO/annotations/instances_train2014.json'
-    # VALID_INS = '../data/COCO/annotations/instances_val2014.json'
-    # COCO_DATA = '../data/COCO/dataset_coco.json'
-    # OUT_DIR = '../data/COCO/'
+    TRAIN_INS = '../../COCO/annotations/instances_train2014.json'
+    VALID_INS = '../../COCO/annotations/instances_val2014.json'
+    COCO_DATA = '../../COCO/caption_datasets/dataset_coco.json'
+    OUT_DIR = '../../COCO/'
 
-    TRAIN_INS = opt.train
-    VALID_INS = opt.val
-    COCO_DATA = opt.dataset
-    OUT_DIR = opt.output
+    # TRAIN_INS = opt.train
+    # VALID_INS = opt.val
+    # COCO_DATA = opt.dataset
+    # OUT_DIR = opt.output
 
     train_data = json.load(open(TRAIN_INS, 'r'))
     val_data = json.load(open(VALID_INS, 'r'))

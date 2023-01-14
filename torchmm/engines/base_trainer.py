@@ -13,14 +13,16 @@ from torch.utils.data import DataLoader
 from torch.nn.utils.clip_grad import clip_grad_norm
 
 from torchmm.models import CMML, NIC, SCAN, SGRAF, AoANet, EarlyFusion, LateFusion, VSEPP, IMRAM, BFAN, TMCFusion, LMFFusion
-from torchmm.datasets import BasicDataset, SemiDataset, PretrainDataset, SampleDataset
-
+from torchmm.datasets import BasicDataset, SemiDataset, PretrainDataset, SampleDataset, TwitterDataset
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 DatasetMap = {
     'basic': BasicDataset,
     'semi': SemiDataset,
     'sample': SampleDataset,
-    'pretrain': PretrainDataset
+    'pretrain': PretrainDataset,
+    'twitter': TwitterDataset,
 }
 
 ModelMap = {
@@ -61,7 +63,6 @@ class BaseTrainer(metaclass=ABCMeta):
         self.select_metric = opt.get('select_metric', 'loss')
 
         self.dataset = DatasetMap[opt.data_mode](**opt)
-
         opt.vocab_size = self.dataset.vocab_size
         opt.vocab = str(self.dataset.word2idx)
         self.model = ModelMap[opt.model_name.lower()](**opt)

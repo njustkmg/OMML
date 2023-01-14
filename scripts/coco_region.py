@@ -18,13 +18,13 @@ FIELDNAMES = ['image_id', 'image_w', 'image_h', 'num_boxes', 'boxes', 'features'
 
 
 def main(opt):
-    # INPUT_DATA = '../data/COCO/trainval_36/trainval_resnet101_faster_rcnn_genome_36.tsv'
-    # COCO_DATA = '../data/COCO/dataset_coco.json'
-    # OUT_DIR = '../data/COCO/'
+    INPUT_DATA = '../../COCO/trainval_36/trainval_resnet101_faster_rcnn_genome_36.tsv'
+    COCO_DATA = '../../COCO/caption_datasets/dataset_coco.json'
+    OUT_DIR = '../../COCO/'
 
-    INPUT_DATA = opt.rcnn
-    COCO_DATA = opt.dataset
-    OUT_DIR = opt.output
+    # INPUT_DATA = opt.rcnn
+    # COCO_DATA = opt.dataset
+    # OUT_DIR = opt.output
 
     data = json.load(open(COCO_DATA, 'r'))
     trans = {}
