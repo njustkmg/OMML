@@ -52,8 +52,11 @@ OMML 发布作者：
 <div align=center><img src="doc/pic/tic.png" width="600px;" /></div>
 
 ### 可视化模块
-- 支持多模态融合任务中EarlyFusion、LateFusion、TMCFusion、LMFFusion在Twitter2015或Twitter2017数据集上的特征可视化，可在config中设置"choose"参数为"fusion"、"image"、"text"或"image&text"以选择可视化融合后的特征、图像特征、文本特征或图像文本特征共同显示。
-- 可视化的特征图像将存于参数"out_root"指定的文件夹的"tsne"下。
+- 调用说明：
+  举例参数设置：dataset="twitter", data_mode="twitter", visual="tsne", choose="fusion"
+	文件输出目录：out_root/tsne
+- 适配模型：EarlyFusion、LateFusion、TMCFusion、LMFFusion
+- 适配数据集：Twitter2015、Twitter2017
 
 <div align=center><img src="doc/pic/visual.jpg" width="600px;" /></div>
 
