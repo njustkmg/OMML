@@ -11,9 +11,9 @@ if __name__ == "__main__":
                         help='Folder to dataset, for example COCO, include eg. dataset_coco.json, img_feat.npy, img_box.npy and label.npy.')
     parser.add_argument('--image_root', type=str, default='../data/COCO/images',
                         help='Folder to original image file.')
-    # parser.add_argument('--data_root', type=str, default='/home/zcb/XWJ/PaddleMM/TomBERT-master/absa_data/twitter',
+    # parser.add_argument('--data_root', type=str, default='../data/absa_data/twitter',
     #                     help='Folder to dataset, for example COCO, include eg. dataset_coco.json, img_feat.npy, img_box.npy and label.npy.')
-    # parser.add_argument('--image_root', type=str, default='/home/zcb/XWJ/PaddleMM/IJCAI2019_data/twitter2017_images/',
+    # parser.add_argument('--image_root', type=str, default='../data/IJCAI2019_data/twitter2017_images/',
     #                     help='Folder to original image file.')
     parser.add_argument('--out_root', type=str, default='experiment/early_add_torch',
                         help='Folder to save experiment data, include model and log.')
