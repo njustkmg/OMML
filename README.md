@@ -53,12 +53,12 @@ Group of OMML:
 <div align=center><img src="doc/pic/tic.png" width="600px;" /></div>
 
 ### Visualization module
-- Call description:<br>
-  Example parameter setting: dataset="twitter", data_ mode="twitter", visual="tsne", choose="fusion"<br>
+- Characteristic level:<br>
+  Example parameter setting: dataset="twitter", data_ mode="twitter", visual="tsne", choose="fusion"
   File output directory: out_ root/tsne
-- Adaptation model: EarlyFusion, LateFusion, TMCFusion, LMFFusion
-- Adapted dataset: Twitter2015, Twitter2017
-<div align=center><img src="doc/pic/visual.jpg" width="600px;" /></div>
+  <div align=center><img src="doc/pic/visual.jpg" width="600px;" /></div>
+- Model level:<br>
+- Indicator level:<br>
 
 ## Framework
 OMML includes torch version torchmm and paddle version paddlemm packages, which consists of the following three modules:
