@@ -1,7 +1,7 @@
 # Recent Update
 
 2023.1.14
-- Add visualization model TSNE
+- Add visualization model TSNE，only EarlyFusion、LateFusion、TMCFusion、LMFFusion on Twitter2015、Twitter2017 can be adapted.
 
 2022.11.14
 - Add model CPRC
