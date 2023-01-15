@@ -54,8 +54,8 @@ Group of OMML:
 
 ### Visualization module
 - Characteristic level:<br>
-  Example parameter setting: dataset="twitter", data_ mode="twitter", visual="tsne", choose="fusion"
-  File output directory: out_ root/tsne
+  Example parameter setting: dataset="twitter", data_ mode="twitter", visual="tsne", choose="fusion"<br>
+  File output directory: out_ root/tsne<br>
   <div align=center><img src="doc/pic/visual.jpg" width="600px;" /></div>
 - Model level:<br>
 - Indicator level:<br>
