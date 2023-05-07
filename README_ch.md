@@ -1,4 +1,4 @@
-简体中文 | [English](README_en.md)
+简体中文 | [English](README.md)
 <div align=center><img src="doc/pic/OMML logo.png" width="500px;" /></div>
 
 <a href="./LICENSE"><img src="https://img.shields.io/badge/license-Apache%202-dfd.svg"></a>
