@@ -1,4 +1,4 @@
-[简体中文](README.md) | English
+[简体中文](README_ch.md) | English
 
 <div align=center><img src="doc/pic/OMML logo.png" width="500px;" /></div>
 
